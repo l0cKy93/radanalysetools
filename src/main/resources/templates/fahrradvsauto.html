@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.springframework.org/schema/mvc">
+<head>
+
+    <title>Radverkehrstools</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+
+
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="/">Radverkehrstools</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item ">
+                <a class="nav-link" href="radinfrastruktur">Radinfrastruktur</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="unfallatlas-analyse">Unfallatlas Daten</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="fahrzeiten">Vergleich Fahrzeiten<span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+
+
+<div class="global-container">
+    <div class="control-container">
+        <h3>Verfügbare Tracks</h3>
+        <ul>Hier könnte ihr Track stehen ...
+            </ul>
+    </div>
+    <div id="mapid" class="content-container">
+        Karte
+    </div>
+</div>
+
+
+
+<script>
+// TODO:
+// Auswahldialog
+// CROP fixen
+// Zeit variabel machen
+// Unabhängig vom Aufnahmezeitpunkt machen
+
+<!--function getText(){-->
+<!--    // read text from URL location-->
+<!--    var request = new XMLHttpRequest();-->
+<!--    request.open('GET', 'http://localhost:8080/data-for-leaflet/gpx/Bochum-Nord.gpx', true);-->
+<!--    request.send(null);-->
+<!--    request.onreadystatechange = function () {-->
+<!--        if (request.readyState === 4 && request.status === 200) {-->
+<!--            var type = request.getResponseHeader('Content-Type');-->
+<!--            if (type.indexOf("application/gpx+xml") !== 1) {-->
+<!--                return request.responseText;-->
+<!--            }-->
+<!--        }-->
+<!--    }-->
+<!--}-->
+
+var map = L.map('mapid').setView([51.4792, 7.2192],11);
+L.tileLayer('https://a.tile.openstreetmap.org/{z}/{x}/{y}.png',
+{
+attribution: 'Map data'
+}
+).addTo(map);
+
+<!--async function fetchMoviesJSON() {-->
+<!--  const response = await fetch('/movies');-->
+<!--  const movies = await response.json();  return movies;-->
+<!--}-->
+
+<!--fetchMoviesJSON().then(movies => {-->
+<!--  movies; // fetched movies-->
+<!--});-->
+
+
+// GPX Track --------------------------------------
+let response = await fetch('http://localhost:8080/data-for-leaflet/gpx/Bochum-Nord.gpx');
+var bicycleGPX = await response.text();
+
+var carGPX;
+async function fetchCarGPX(){
+    const response = await fetch('http://localhost:8080/data-for-leaflet/gpx/Bochum-Nord.gpx');
+    const carGPX = await response.text();
+    return carGPX;
+}
+fetchCarGPX().then(carGPX => { carGPX; });
+
+var duration_car;
+var duration_bicycle;
+
+new L.GPX(bicycleGPX, {
+    async: true,
+    polyline_options: {
+    color: 'green',
+    opacity: 0.75,
+    weight: 3,
+    lineCap: 'round'},
+    marker_options: {
+    startIconUrl: 'http://localhost:8080/data-for-leaflet/images/pin-icon-start.png',
+    endIconUrl: 'http://localhost:8080/data-for-leaflet/pin-icon-end.png',
+    shadowUrl: 'http://localhost:8080/data-for-leaflet/pin-shadow.png'},
+
+  }).on('loaded', function(e) {
+duration_bicycle = e.target.get_total_time();
+  map.fitBounds(e.target.getBounds());
+}).addTo(map);
+
+new L.GPX(carGPX,{
+    marker_options: {
+    startIconUrl: 'http://localhost:8080/data-for-leaflet/pin-icon-start.png',
+    endIconUrl: 'http://localhost:8080/data-for-leaflet/pin-icon-end.png',
+    shadowUrl: 'http://localhost:8080/data-for-leaflet/pin-shadow.png'},
+    polyline_options: {
+    color: 'blue',
+    opacity: 0.75,
+    weight: 3,
+    lineCap: 'round'},
+    async: true
+   }).on('loaded', function(e) {
+//duration_car = e.target.get_total_time();
+  map.fitBounds(e.target.getBounds());
+}).addTo(map);
+
+//var duration = Math.max(duration_bicycle, duration_car);
+//console.log(duration_bicycle);
+//var sim_duration = 1; //in Minutes
+//var sim_step_size = duration / (sim_duration * (1000*60));
+
+// Auto Marker Icon
+var carIcon = L.icon({
+	iconUrl: 'http://localhost:8080/data-for-leaflet/images/car.png',
+	shadowUrl: 'http://localhost:8080/data-for-leaflet/leaf-shadow.png',
+
+	iconSize:     [15, 15], // size of the icon
+	shadowSize:   [0, 0], // size of the shadow
+	iconAnchor:   [8, 8], // point of the icon which will correspond to marker's location
+	shadowAnchor: [0, 0],  // the same for the shadow
+	popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
+});
+
+// Fahrrad Marker Icon
+var bicycleIcon = L.icon({
+	iconUrl: 'static/data-for-leaflet/images/bicycle.png',
+	shadowUrl: 'static/data-for-leaflet/images/leaf-shadow.png',
+
+	iconSize:     [15, 15], // size of the icon
+	shadowSize:   [0, 0], // size of the shadow
+	iconAnchor:   [8, 8], // point of the icon which will correspond to marker's location
+	shadowAnchor: [0, 0],  // the same for the shadow
+	popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
+});
+
+
+// Marker --------------------------------------
+var carMarker = L.marker([51.8898982,7.618989892],{icon: carIcon}).addTo(map);
+var bicycleMarker = L.marker([51.4798982,7.218989892],{icon: bicycleIcon}).addTo(map);
+
+
+
+
+var bicycleTrkpts;
+var carTrkpts;
+// Parse GPX Track
+var bicycleTrkpts = getXMLDocObject(bicycleGPX, function(xmlDoc) {
+bicycleTrkpts = xmlDoc.getElementsByTagName('trkpt');
+});
+var carTrkpts = getXMLDocObject(carGPX, function(xmlDoc) {
+carTrkpts = xmlDoc.getElementsByTagName('trkpt');
+});
+
+
+// get content and parse it to Document Object Model
+function getXMLDocObject(xmlFile, callback) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if ((this.readyState === 4) && (this.status === 200)) {
+            var xmlContent = this.responseText;
+            var xmlDoc = parseXML(xmlContent);
+            callback(xmlDoc);
+        }
+    };
+    xhttp.open('GET', xmlFile, true);
+    xhttp.send();
+}
+
+// parse a text string into an XML DOM object
+function parseXML(xmlContent) {
+    var parser = new DOMParser();
+    var xmlDoc = parser.parseFromString(xmlContent, 'text/xml');
+    return xmlDoc;
+}
+
+
+// Positionen aktualisieren ----------------------------------
+
+var counter = 0;
+function start(){
+is_stopped = false;
+if(counter != 0 && is_stopped == false)
+	return;
+document.getElementById('stop_button').innerHTML = "Pause";
+ if(iterateOverBicycleTrkpts() != -1 || iterateOverCarTrkpts() != -1){
+	update_positions = setTimeout(function(){
+	if(iterateOverBicycleTrkpts() != -1)
+	   bicycleMarker.setLatLng([bicycleLat, bicycleLon]);
+	if(iterateOverCarTrkpts() != -1)
+	   carMarker.setLatLng([carLat, carLon]);
+      	document.getElementById('aktuelle_zeit').innerHTML = counter + "Sekunden";
+      	counter++;
+      	start();
+        }, 100);
+  }
+  else{
+  	counter = 0;
+	is_stopped = true
+	document.getElementById('start_button').innerHTML = "Neustarten";
+	return;
+  }
+}
+
+var is_stopped = false;
+function stop(){
+if(is_stopped){ //Zurücksetzen
+	if(counter = 0)
+		return;
+	clearTimeout(aktualisieren_fahrrad);
+	counter = 0;
+	document.getElementById('start_button').innerHTML = "Los geht's";
+	document.getElementById('stop_button').innerHTML = "Pause";
+	document.getElementById('aktuelle_zeit').innerHTML = "0";
+	is_stopped = false;
+	bicycleposition = 0;
+	carposition = 0;
+
+}
+else{ //Pausiersen
+	clearTimeout(update_positions);
+
+	document.getElementById('start_button').innerHTML = "Weiter geht's";
+	document.getElementById('stop_button').innerHTML = "Beenden";
+	is_stopped = true;
+}
+
+}
+var bicycleLon;
+var bicycleLat;
+var bicycleTime;
+var bicycleposition = 0;
+// iterate bicycle ------------------------
+function iterateOverBicycleTrkpts(){
+bicycleposition++;
+if(bicycleposition >= bicycleTrkpts.length)
+	return -1;
+var temp_trkpt = bicycleTrkpts[bicycleposition];
+bicycleLon = temp_trkpt.getAttribute('lon');
+bicycleLat = temp_trkpt.getAttribute('lat');
+
+for(var i = 0; i < temp_trkpt.childNodes.length; i++)
+{
+   var child = temp_trkpt.childNodes[i];
+if(child.nodeName == "time"){
+	bicycleTime = child.innerHTML;
+	break;
+}
+}
+
+}
+
+
+
+var carLon;
+var carLat;
+var carTime;
+var carposition = 0;
+// iterate Car ------------------------
+function iterateOverCarTrkpts(){
+carposition++;
+if(carposition >= carTrkpts.length)
+	return -1;
+var temp_trkpt = carTrkpts[carposition];
+carLon = temp_trkpt.getAttribute('lon');
+carLat = temp_trkpt.getAttribute('lat');
+
+for(var i = 0; i < temp_trkpt.childNodes.length; i++)
+{
+ var child = temp_trkpt.childNodes[i];
+if(child.nodeName == "time"){
+	carTime = child.innerHTML;
+	break;
+}
+}
+
+}
+
+
+</script>
+
+<button id="start_button" onclick="start()">Los geht's</button>
+<button id="stop_button" onclick="stop()">Pause</button>
+<label id="aktuelle_zeit">xxx</label>
+
+
+
+
+<div class="footer" th:insert="fragments/footer :: footer"></div>
+
+</body>

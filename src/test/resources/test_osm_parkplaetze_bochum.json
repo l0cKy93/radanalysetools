@@ -1,0 +1,5498 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.56.7 b85c4387",
+  "osm3s": {
+    "timestamp_osm_base": "2020-10-13T20:55:03Z",
+    "timestamp_areas_base": "2020-10-13T20:08:02Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 443822379,
+  "lat": 51.5029784,
+  "lon": 7.2126939,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "12",
+    "covered": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 472443725,
+  "lat": 51.4554486,
+  "lon": 7.1890084,
+  "tags": {
+    "amenity": "bicycle_parking"
+  }
+},
+{
+  "type": "node",
+  "id": 474985787,
+  "lat": 51.4820097,
+  "lon": 7.1318947,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "10",
+    "covered": "no",
+    "operator": "Stadt Bochum",
+    "supervised": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 582943387,
+  "lat": 51.4723750,
+  "lon": 7.2108101,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "bike_ride": "yes",
+    "capacity": "10",
+    "covered": "yes",
+    "fixme": "bicycle_parking=* fehlt"
+  }
+},
+{
+  "type": "node",
+  "id": 582943388,
+  "lat": 51.4724951,
+  "lon": 7.2106529,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "bike_ride": "yes",
+    "capacity": "20",
+    "covered": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 696761069,
+  "lat": 51.4890554,
+  "lon": 7.2156973,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "12",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 696761092,
+  "lat": 51.4888050,
+  "lon": 7.2156048,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "10",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 1029447917,
+  "lat": 51.4816398,
+  "lon": 7.3272331,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "covered": "no",
+    "fixme": "Wo ist dieser Fahrradständer?"
+  }
+},
+{
+  "type": "node",
+  "id": 1029448101,
+  "lat": 51.4778827,
+  "lon": 7.3235271,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "11",
+    "covered": "yes",
+    "level": "0",
+    "park_ride": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1232392446,
+  "lat": 51.4511313,
+  "lon": 7.2435661,
+  "tags": {
+    "amenity": "bicycle_parking"
+  }
+},
+{
+  "type": "node",
+  "id": 1301976369,
+  "lat": 51.4945861,
+  "lon": 7.1452128,
+  "tags": {
+    "amenity": "bicycle_parking"
+  }
+},
+{
+  "type": "node",
+  "id": 1429865960,
+  "lat": 51.4417389,
+  "lon": 7.2579717,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "9",
+    "covered": "yes",
+    "level": "0",
+    "level:ref": "05",
+    "name": "Fahrradstellplatz Ebene 05"
+  }
+},
+{
+  "type": "node",
+  "id": 1429865967,
+  "lat": 51.4421038,
+  "lon": 7.2591403,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "9",
+    "covered": "yes",
+    "level": "0",
+    "level:ref": "05",
+    "name": "Fahrradstellplatz Ebene 05"
+  }
+},
+{
+  "type": "node",
+  "id": 1429865983,
+  "lat": 51.4425028,
+  "lon": 7.2603007,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "9",
+    "covered": "yes",
+    "level": "0",
+    "level:ref": "05",
+    "name": "Fahrradstellplatz Ebene 05"
+  }
+},
+{
+  "type": "node",
+  "id": 1429865986,
+  "lat": 51.4426389,
+  "lon": 7.2573523,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "14",
+    "covered": "yes",
+    "level": "1",
+    "level:ref": "04",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 1429905128,
+  "lat": 51.4802257,
+  "lon": 7.1979825,
+  "tags": {
+    "FIXME": "Anzahl geschätzt",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "50",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 1509236735,
+  "lat": 51.4756103,
+  "lon": 7.3149245,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "6"
+  }
+},
+{
+  "type": "node",
+  "id": 1704075495,
+  "lat": 51.4801436,
+  "lon": 7.2160705,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "20",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 1746145652,
+  "lat": 51.4434097,
+  "lon": 7.2596026,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "14",
+    "covered": "yes",
+    "level": "1",
+    "level:ref": "04",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 1781718834,
+  "lat": 51.4811857,
+  "lon": 7.1329973,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "6",
+    "covered": "no",
+    "operator": "Stadt Bochum",
+    "supervised": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 1811313460,
+  "lat": 51.4430351,
+  "lon": 7.2584682,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "14",
+    "covered": "yes",
+    "level": "1",
+    "level:ref": "04",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 1811314914,
+  "lat": 51.4437006,
+  "lon": 7.2598389,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "5",
+    "covered": "yes",
+    "level": "1",
+    "level:ref": "04",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 1811315097,
+  "lat": 51.4433125,
+  "lon": 7.2587285,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "5",
+    "covered": "yes",
+    "level": "1",
+    "level:ref": "04",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 1811315530,
+  "lat": 51.4429514,
+  "lon": 7.2575537,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "5",
+    "covered": "yes",
+    "level": "1",
+    "level:ref": "04",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 1811315836,
+  "lat": 51.4430185,
+  "lon": 7.2577736,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "5",
+    "covered": "yes",
+    "level": "1",
+    "level:ref": "04",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 1811317098,
+  "lat": 51.4447906,
+  "lon": 7.2689756,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "capacity": "12",
+    "covered": "no",
+    "fee": "no",
+    "name": "Fahrradstellplatz Ebene 05",
+    "opening_hours": "24/7",
+    "operator": "Ruhr-Universität Bochum",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 1812130845,
+  "lat": 51.4431062,
+  "lon": 7.2636245,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "5",
+    "covered": "no",
+    "name": "Fahrradstellplatz Ebene 05",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 1812130880,
+  "lat": 51.4443423,
+  "lon": 7.2624836,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "10",
+    "covered": "yes",
+    "name": "Fahrradstellplatz Ebene 03",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 1812132210,
+  "lat": 51.4442790,
+  "lon": 7.2632343,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "10",
+    "covered": "yes",
+    "layer": "4",
+    "level": "4",
+    "level:ref": "01",
+    "name": "Fahrradstellplatz Ebene 01",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 1812132211,
+  "lat": 51.4446936,
+  "lon": 7.2643662,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "10",
+    "covered": "yes",
+    "layer": "3",
+    "level": "3",
+    "level:ref": "02",
+    "name": "Fahrradstellplatz Ebene 02",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 1812132854,
+  "lat": 51.4448775,
+  "lon": 7.2646130,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "15",
+    "covered": "yes",
+    "level": "0",
+    "level:ref": "04",
+    "name": "Fahrradstellplatz Ebene 04",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 1812132855,
+  "lat": 51.4446066,
+  "lon": 7.2635991,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "11",
+    "covered": "yes",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 1812132856,
+  "lat": 51.4450948,
+  "lon": 7.2655410,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "5",
+    "covered": "yes",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 1812132857,
+  "lat": 51.4453322,
+  "lon": 7.2657717,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "13",
+    "covered": "yes",
+    "name": "Fahrradstellplatz Ebene 04",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 1812135333,
+  "lat": 51.4454789,
+  "lon": 7.2584671,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "10",
+    "covered": "yes",
+    "level": "0",
+    "level:ref": "01",
+    "name": "Fahrradstellplatz Ebene 01",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 1812135336,
+  "lat": 51.4460501,
+  "lon": 7.2598164,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "15",
+    "covered": "yes",
+    "level": "5",
+    "level:ref": "0",
+    "name": "Fahrradstellplatz MZ 0",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 1812135849,
+  "lat": 51.4453756,
+  "lon": 7.2599107,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "10",
+    "covered": "yes",
+    "level": "5",
+    "level:ref": "0",
+    "name": "Fahrradstellplatz SO 0",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 1812137663,
+  "lat": 51.4452016,
+  "lon": 7.2610190,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "22",
+    "covered": "yes",
+    "level": "5",
+    "level:ref": "0",
+    "name": "Fahrradstellplatz UB 0",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 1812137664,
+  "lat": 51.4457157,
+  "lon": 7.2609760,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "5",
+    "covered": "yes",
+    "level": "5",
+    "level:ref": "0",
+    "name": "Fahrradstellplatz UV 0",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 1812137783,
+  "lat": 51.4447922,
+  "lon": 7.2602705,
+  "tags": {
+    "addr:city": "Bochum",
+    "addr:postcode": "44801",
+    "addr:street": "M-Südstraße",
+    "amenity": "bicycle_parking",
+    "capacity": "27",
+    "covered": "yes",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 1812137784,
+  "lat": 51.4449363,
+  "lon": 7.2612742,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "10",
+    "covered": "yes",
+    "level": "4",
+    "level:ref": "01",
+    "name": "Fahrradstellplatz Kunstsammlung 01",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 1812137785,
+  "lat": 51.4452877,
+  "lon": 7.2629189,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "15",
+    "covered": "yes",
+    "level": "3;0",
+    "level:ref": "02",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 1812137786,
+  "lat": 51.4451472,
+  "lon": 7.2615597,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "8",
+    "level": "5",
+    "level:ref": "0",
+    "name": "Fahrradstellplatz FNO 0",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 1812137940,
+  "lat": 51.4445658,
+  "lon": 7.2592833,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "29",
+    "covered": "yes",
+    "level": "0",
+    "level:ref": "01",
+    "name": "Fahrradstellplatz MA 01",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 1812137941,
+  "lat": 51.4444400,
+  "lon": 7.2594050,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "5",
+    "covered": "yes",
+    "level": "5",
+    "level:ref": "0",
+    "name": "Fahrradstellplatz MA 0",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 1907544174,
+  "lat": 51.4797084,
+  "lon": 7.3384026,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "3",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 2045890620,
+  "lat": 51.4702069,
+  "lon": 7.1302694,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "anchors",
+    "covered": "no",
+    "operator": "FitX Bochum-Wattenscheid"
+  }
+},
+{
+  "type": "node",
+  "id": 2274416441,
+  "lat": 51.4478807,
+  "lon": 7.2708480,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "16",
+    "covered": "yes",
+    "level": "1",
+    "level:ref": "0"
+  }
+},
+{
+  "type": "node",
+  "id": 2361708789,
+  "lat": 51.4467168,
+  "lon": 7.1897048,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "10",
+    "covered": "no",
+    "fee": "no",
+    "lit": "no",
+    "opening_hours": "24/7",
+    "surface": "compacted"
+  }
+},
+{
+  "type": "node",
+  "id": 2361708797,
+  "lat": 51.4469550,
+  "lon": 7.1939554,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "10",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 3455498311,
+  "lat": 51.4812388,
+  "lon": 7.2115778,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "bike_ride": "yes",
+    "capacity": "9",
+    "covered": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3590108236,
+  "lat": 51.4467883,
+  "lon": 7.2667810,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "8",
+    "covered": "no",
+    "level": "0",
+    "level:ref": "05",
+    "name": "Fahrradstellplatz Ebene 05"
+  }
+},
+{
+  "type": "node",
+  "id": 3667352502,
+  "lat": 51.4515996,
+  "lon": 7.1565938,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "rack",
+    "fee": "no",
+    "lit": "no",
+    "opening_hours": "24/7",
+    "supervised": "no",
+    "surface": "gravel"
+  }
+},
+{
+  "type": "node",
+  "id": 3722576994,
+  "lat": 51.5046483,
+  "lon": 7.1644692,
+  "tags": {
+    "access": "customers",
+    "amenity": "bicycle_parking",
+    "capacity": "22",
+    "covered": "yes",
+    "fee": "no",
+    "lit": "no",
+    "name": "LWL-Industriemuseum Zeche Hannover",
+    "opening_hours": "Apr-Oct We-Sa 14:00-18:00; Su, PH 11:00-18:00",
+    "operator": "LW",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 3741163262,
+  "lat": 51.4891346,
+  "lon": 7.2141437,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 4159687898,
+  "lat": 51.4240575,
+  "lon": 7.1581236,
+  "tags": {
+    "access": "customers",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "anchors",
+    "capacity": "5",
+    "covered": "no",
+    "fee": "no",
+    "lit": "no",
+    "opening_hours": "24/7",
+    "operator": "Augusta - Krankenanstalt",
+    "supervised": "no",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 4729499162,
+  "lat": 51.4458779,
+  "lon": 7.2590266,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "15",
+    "covered": "yes",
+    "name": "Fahrradstellplatz Ebene 01",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 4742903021,
+  "lat": 51.4479194,
+  "lon": 7.2547557,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "12",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 4756235349,
+  "lat": 51.4268966,
+  "lon": 7.1403919,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "24",
+    "covered": "no",
+    "fee": "no",
+    "lit": "no",
+    "opening_hours": "24/7",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 5022324202,
+  "lat": 51.4799501,
+  "lon": 7.2228594,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "6",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 5121485125,
+  "lat": 51.4452209,
+  "lon": 7.2589311,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "covered": "yes",
+    "level": "5",
+    "level:ref": "0",
+    "name": "Fahrradstellplatz MAFO 0",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 5121485144,
+  "lat": 51.4450406,
+  "lon": 7.2602707,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "covered": "yes",
+    "level": "5",
+    "level:ref": "0",
+    "name": "Fahrradstellplatz UB 0",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 5121485145,
+  "lat": 51.4452983,
+  "lon": 7.2575005,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "covered": "no",
+    "level": "0",
+    "level:ref": "01",
+    "name": "Fahrradstellplatz Ebene 01",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 5126136040,
+  "lat": 51.4439139,
+  "lon": 7.2663282,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "covered": "yes",
+    "name": "Fahrradstellplatz Ebene 05",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 5126136041,
+  "lat": 51.4437885,
+  "lon": 7.2655812,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "covered": "no",
+    "name": "Fahrradstellplatz Ebene 05",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 5126136042,
+  "lat": 51.4425347,
+  "lon": 7.2627461,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "covered": "no",
+    "level": "0",
+    "level:ref": "05",
+    "name": "Fahrradstellplatz Ebene 06"
+  }
+},
+{
+  "type": "node",
+  "id": 5126136043,
+  "lat": 51.4419403,
+  "lon": 7.2615512,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "covered": "yes",
+    "level": "0",
+    "level:ref": "05",
+    "name": "Fahrradstellplatz Ebene 06"
+  }
+},
+{
+  "type": "node",
+  "id": 5126136044,
+  "lat": 51.4416971,
+  "lon": 7.2606567,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "covered": "yes",
+    "level": "0",
+    "level:ref": "05",
+    "name": "Fahrradstellplatz Ebene 05"
+  }
+},
+{
+  "type": "node",
+  "id": 5126136045,
+  "lat": 51.4419508,
+  "lon": 7.2589280,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "covered": "yes",
+    "level": "0",
+    "level:ref": "05",
+    "name": "Fahrradstellplatz Ebene 05"
+  }
+},
+{
+  "type": "node",
+  "id": 5139244650,
+  "lat": 51.4447383,
+  "lon": 7.2640530,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "covered": "yes",
+    "name": "Fahrradstellplatz Ebene 03",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 5139244651,
+  "lat": 51.4458503,
+  "lon": 7.2646459,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "12",
+    "covered": "yes",
+    "layer": "2",
+    "level": "2",
+    "level:ref": "03",
+    "name": "Fahrradstellplatz HIB 02",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 5140887391,
+  "lat": 51.4449849,
+  "lon": 7.2656368,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "10",
+    "covered": "yes",
+    "layer": "3",
+    "level": "3",
+    "level:ref": "02",
+    "name": "Fahrradstellplatz Ebene 02",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 5140887392,
+  "lat": 51.4462548,
+  "lon": 7.2658327,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "12",
+    "covered": "yes",
+    "fixme": "level und level:ref prüfen! https://wiki.openstreetmap.org/wiki/Bochum/Projekte",
+    "level": "0",
+    "level:ref": "03",
+    "name": "Fahrradstellplatz HIC 03",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 5140887393,
+  "lat": 51.4461856,
+  "lon": 7.2649874,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "level": "0",
+    "level:ref": "04",
+    "name": "Fahrradstellplatz Ebene 04",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 5140887394,
+  "lat": 51.4454703,
+  "lon": 7.2662707,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "covered": "yes",
+    "level": "0",
+    "level:ref": "04",
+    "name": "Fahrradstellplatz Ebene 04",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 5140887395,
+  "lat": 51.4449983,
+  "lon": 7.2651941,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "covered": "yes",
+    "level": "0",
+    "level:ref": "04",
+    "name": "Fahrradstellplatz Ebene 04",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 5196696837,
+  "lat": 51.4904518,
+  "lon": 7.2314468,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "8",
+    "covered": "no",
+    "fee": "no",
+    "opening_hours": "24/7",
+    "operator": "Kinderklinik, St. Josefs-Hospital",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 5196696838,
+  "lat": 51.4904729,
+  "lon": 7.2317757,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "8",
+    "covered": "no",
+    "fee": "no",
+    "opening_hours": "24/7",
+    "operator": "Kinderklinik, St. Josefs-Hospital",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 5219270402,
+  "lat": 51.4447258,
+  "lon": 7.2618603,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "12",
+    "covered": "yes",
+    "layer": "5",
+    "level": "5",
+    "level:ref": "0",
+    "name": "Fahrradstellplatz HZO 0",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 5219270403,
+  "lat": 51.4448013,
+  "lon": 7.2619167,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "14",
+    "covered": "no",
+    "layer": "5",
+    "level": "5",
+    "level:ref": "0",
+    "name": "Fahrradstellplatz HZO 0",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 5264552755,
+  "lat": 51.4817344,
+  "lon": 7.2150202,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "20",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 5348123693,
+  "lat": 51.4811307,
+  "lon": 7.2145431,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "3",
+    "covered": "no",
+    "fee": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 5348123704,
+  "lat": 51.4808081,
+  "lon": 7.2146292,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "3",
+    "covered": "no",
+    "fee": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 5365728526,
+  "lat": 51.4571229,
+  "lon": 7.2382783,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "12",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 5471246845,
+  "lat": 51.4793530,
+  "lon": 7.2236121,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "20",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 5502574662,
+  "lat": 51.4521275,
+  "lon": 7.1924547,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "14",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 5664368228,
+  "lat": 51.4265408,
+  "lon": 7.1425830,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "20",
+    "covered": "yes",
+    "opening_hours": "24/7",
+    "supervised": "no",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 5715911441,
+  "lat": 51.4776766,
+  "lon": 7.2152295,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "30",
+    "covered": "no",
+    "fee": "no",
+    "opening_hours": "24/7",
+    "supervised": "no",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 5842045571,
+  "lat": 51.4898243,
+  "lon": 7.2279383,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "8",
+    "covered": "no",
+    "fee": "no",
+    "lit": "no",
+    "opening_hours": "24/7",
+    "supervised": "no",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 5859466890,
+  "lat": 51.4853722,
+  "lon": 7.2226195,
+  "tags": {
+    "access": "customers",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "20",
+    "covered": "yes",
+    "fee": "no",
+    "lit": "no",
+    "opening_hours": "08:30-12:30,15:30-20:00",
+    "operator": "Augusta-Kranken-Anstalt-Bochum-Mitte",
+    "supervised": "no",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 5923830842,
+  "lat": 51.4281140,
+  "lon": 7.1639394,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "5",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 5923830843,
+  "lat": 51.4277078,
+  "lon": 7.1632735,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "4",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 5923830847,
+  "lat": 51.4272619,
+  "lon": 7.1622154,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "4",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 5963943003,
+  "lat": 51.4619056,
+  "lon": 7.2017817,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "2",
+    "covered": "no",
+    "fee": "no",
+    "lit": "yes",
+    "opening_hours": "24/7",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 5967169855,
+  "lat": 51.4779844,
+  "lon": 7.2234525,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "7",
+    "covered": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 6022539679,
+  "lat": 51.4769462,
+  "lon": 7.3023734,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "no",
+    "smoothness": "intermediate",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 6026275121,
+  "lat": 51.4850954,
+  "lon": 7.2149665,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "8",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6026275123,
+  "lat": 51.4841081,
+  "lon": 7.2156568,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "2",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6031932449,
+  "lat": 51.4821575,
+  "lon": 7.2132109,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "no",
+    "smoothness": "excellent",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "node",
+  "id": 6031932450,
+  "lat": 51.4820656,
+  "lon": 7.2131526,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "4",
+    "covered": "no",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "node",
+  "id": 6036411854,
+  "lat": 51.4427459,
+  "lon": 7.2560828,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "7",
+    "covered": "yes",
+    "level": "1",
+    "level:ref": "04",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 6036411855,
+  "lat": 51.4425675,
+  "lon": 7.2562344,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "7",
+    "covered": "yes",
+    "level": "1",
+    "level:ref": "04",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 6036411856,
+  "lat": 51.4426682,
+  "lon": 7.2561526,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "7",
+    "covered": "yes",
+    "level": "1",
+    "level:ref": "04",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 6036411859,
+  "lat": 51.4425200,
+  "lon": 7.2560620,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "7",
+    "covered": "yes",
+    "level": "1",
+    "level:ref": "04",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 6036411860,
+  "lat": 51.4426208,
+  "lon": 7.2559802,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "7",
+    "covered": "yes",
+    "level": "1",
+    "level:ref": "04",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 6036411861,
+  "lat": 51.4426985,
+  "lon": 7.2559105,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "7",
+    "covered": "yes",
+    "level": "1",
+    "level:ref": "04",
+    "operator": "Ruhr-Universität Bochum"
+  }
+},
+{
+  "type": "node",
+  "id": 6054902091,
+  "lat": 51.4759325,
+  "lon": 7.3031799,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "4",
+    "covered": "no",
+    "smoothness": "good",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 6054902092,
+  "lat": 51.4753040,
+  "lon": 7.3045763,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "no",
+    "lit": "yes",
+    "smoothness": "good",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 6054902094,
+  "lat": 51.4754402,
+  "lon": 7.3041582,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "4",
+    "covered": "no",
+    "lit": "yes",
+    "smoothness": "good",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 6054902100,
+  "lat": 51.4751974,
+  "lon": 7.3044754,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "2",
+    "covered": "no",
+    "lit": "yes",
+    "smoothness": "intermediate",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 6054902102,
+  "lat": 51.4771748,
+  "lon": 7.3022659,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "2",
+    "covered": "no",
+    "smoothness": "good",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 6054902106,
+  "lat": 51.4760528,
+  "lon": 7.3028055,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "4",
+    "covered": "no",
+    "smoothness": "good",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 6054902107,
+  "lat": 51.4774648,
+  "lon": 7.3022512,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "no",
+    "smoothness": "good",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 6055050323,
+  "lat": 51.4808821,
+  "lon": 7.2085400,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "anchors",
+    "capacity": "5",
+    "colour": "silver",
+    "covered": "no",
+    "fee": "no",
+    "lit": "no",
+    "material": "metal",
+    "opening_hours": "24/7",
+    "operator": "das Labor",
+    "operator:type": "community",
+    "operator:wikidata": "Q42839700",
+    "smoothness": "good",
+    "supervised": "no",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "node",
+  "id": 6071500263,
+  "lat": 51.4697491,
+  "lon": 7.2965146,
+  "tags": {
+    "access": "permissive",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "6",
+    "colour": "yellow",
+    "covered": "no",
+    "fee": "no",
+    "smoothness": "bad",
+    "supervised": "no",
+    "surface": "grass"
+  }
+},
+{
+  "type": "node",
+  "id": 6075372316,
+  "lat": 51.5102747,
+  "lon": 7.2114124,
+  "tags": {
+    "access": "permissive",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "lockers",
+    "capacity": "10",
+    "covered": "yes",
+    "operator": "Bogestra"
+  }
+},
+{
+  "type": "node",
+  "id": 6110941269,
+  "lat": 51.4904473,
+  "lon": 7.2277552,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "10",
+    "covered": "no",
+    "fee": "no",
+    "name": "Tierpark + Fossilium Bochum",
+    "operator": "Tierpark + Fossilium Bochum",
+    "surface": "grass_paver"
+  }
+},
+{
+  "type": "node",
+  "id": 6128850833,
+  "lat": 51.4670236,
+  "lon": 7.2972557,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "14",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6189912422,
+  "lat": 51.4697778,
+  "lon": 7.3086037,
+  "tags": {
+    "access": "private",
+    "amenity": "bicycle_parking",
+    "covered": "no",
+    "fee": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6201936295,
+  "lat": 51.4264626,
+  "lon": 7.1587794,
+  "tags": {
+    "access": "customers",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "4",
+    "covered": "no",
+    "fee": "no",
+    "lit": "yes",
+    "opening_hours": "24/7",
+    "operator": "St. Josefs-Hospital Bochum-Linden",
+    "surface": "sett"
+  }
+},
+{
+  "type": "node",
+  "id": 6227385175,
+  "lat": 51.4260141,
+  "lon": 7.1607520,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "4",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6230304519,
+  "lat": 51.4903488,
+  "lon": 7.3021186,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "no",
+    "fee": "no",
+    "smoothness": "good",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 6246309926,
+  "lat": 51.4265530,
+  "lon": 7.1414013,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "lockers",
+    "capacity": "16",
+    "covered": "yes",
+    "fee": "yes",
+    "name": "Fahrradbox Bf Dahlhausen",
+    "operator": "Kienzler DeinRadschloss",
+    "website": "https://www.dein-radschloss.de/boxbuchen/?preselect_unit_uid=227"
+  }
+},
+{
+  "type": "node",
+  "id": 6246515357,
+  "lat": 51.4755275,
+  "lon": 7.2159251,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "lockers",
+    "capacity": "10",
+    "covered": "yes",
+    "fee": "yes",
+    "name": "Fahrradbox Bermuda3Eck",
+    "operator": "Kienzler DeinRadschloss",
+    "website": "https://www.dein-radschloss.de/boxbuchen/?preselect_unit_uid=205"
+  }
+},
+{
+  "type": "node",
+  "id": 6250097585,
+  "lat": 51.4797219,
+  "lon": 7.2204675,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6250382666,
+  "lat": 51.4829004,
+  "lon": 7.2148443,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "5",
+    "covered": "no",
+    "fee": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6250382667,
+  "lat": 51.4830255,
+  "lon": 7.2144701,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "12",
+    "covered": "no",
+    "fee": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6250382668,
+  "lat": 51.4830914,
+  "lon": 7.2144703,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "3",
+    "covered": "yes",
+    "fee": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6250382669,
+  "lat": 51.4831134,
+  "lon": 7.2145578,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "3",
+    "covered": "yes",
+    "fee": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6250382670,
+  "lat": 51.4830171,
+  "lon": 7.2145345,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "3",
+    "covered": "no",
+    "fee": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6267518854,
+  "lat": 51.4696057,
+  "lon": 7.2937630,
+  "tags": {
+    "access": "customers",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "14",
+    "covered": "yes",
+    "fee": "no",
+    "level": "0",
+    "operator": "Kaufland",
+    "smoothness": "excellent",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "node",
+  "id": 6284483075,
+  "lat": 51.4745073,
+  "lon": 7.3064194,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "4",
+    "covered": "no",
+    "fee": "no",
+    "lit": "yes",
+    "smoothness": "good",
+    "supervised": "no",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 6284754236,
+  "lat": 51.4303512,
+  "lon": 7.1336717,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "no",
+    "fee": "no",
+    "lit": "yes",
+    "opening_hours": "24/7",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 6284754237,
+  "lat": 51.4304446,
+  "lon": 7.1337822,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "no",
+    "fee": "no",
+    "lit": "yes",
+    "opening_hours": "24/7",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 6289307893,
+  "lat": 51.4725811,
+  "lon": 7.2987414,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "2",
+    "covered": "no",
+    "fee": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6299004747,
+  "lat": 51.4750252,
+  "lon": 7.2724560,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "no",
+    "fee": "no",
+    "lit": "yes",
+    "smoothness": "good",
+    "supervised": "no",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 6299004749,
+  "lat": 51.4745981,
+  "lon": 7.2720906,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "no",
+    "fee": "no",
+    "lit": "yes",
+    "smoothness": "good",
+    "supervised": "no",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 6299004751,
+  "lat": 51.4764127,
+  "lon": 7.2747434,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "no",
+    "fee": "no",
+    "lit": "yes",
+    "smoothness": "good",
+    "supervised": "no",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 6299004753,
+  "lat": 51.4728159,
+  "lon": 7.2674566,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "no",
+    "fee": "no",
+    "lit": "yes",
+    "smoothness": "good",
+    "supervised": "no",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 6299004763,
+  "lat": 51.4767521,
+  "lon": 7.2758140,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "no",
+    "fee": "no",
+    "lit": "yes",
+    "smoothness": "good",
+    "supervised": "no",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 6299004771,
+  "lat": 51.4724670,
+  "lon": 7.2670048,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "no",
+    "fee": "no",
+    "lit": "yes",
+    "smoothness": "good",
+    "supervised": "no",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 6301215712,
+  "lat": 51.4721535,
+  "lon": 7.2110012,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "lockers",
+    "capacity": "16",
+    "covered": "yes",
+    "fee": "yes",
+    "name": "Fahrradbox Bf Ehrenfeld",
+    "operator": "Kienzler DeinRadschloss",
+    "website": "https://www.dein-radschloss.de/boxbuchen/?preselect_unit_uid=210"
+  }
+},
+{
+  "type": "node",
+  "id": 6301250706,
+  "lat": 51.5158695,
+  "lon": 7.2713982,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "lockers",
+    "capacity": "10",
+    "covered": "yes",
+    "fee": "yes",
+    "name": "Fahrradbox Castroper Hellweg / Heinrichstraße",
+    "operator": "Kienzler DeinRadschloss",
+    "website": "https://www.dein-radschloss.de/boxbuchen/?preselect_unit_uid=201"
+  }
+},
+{
+  "type": "node",
+  "id": 6301262622,
+  "lat": 51.4794723,
+  "lon": 7.2241537,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "lockers",
+    "capacity": "10",
+    "covered": "yes",
+    "fee": "yes",
+    "name": "Fahrradbox HBF Nord",
+    "operator": "Kienzler DeinRadschloss",
+    "website": "https://www.dein-radschloss.de/boxbuchen/?preselect_unit_uid=200"
+  }
+},
+{
+  "type": "node",
+  "id": 6301276675,
+  "lat": 51.4474636,
+  "lon": 7.2523569,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "lockers",
+    "capacity": "10",
+    "covered": "yes",
+    "fee": "yes",
+    "name": "Fahrradbox U35 Gesundheitscampus",
+    "operator": "Kienzler DeinRadschloss",
+    "website": "https://www.dein-radschloss.de/boxbuchen/?preselect_unit_uid=199"
+  }
+},
+{
+  "type": "node",
+  "id": 6301286925,
+  "lat": 51.4599609,
+  "lon": 7.1544024,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "lockers",
+    "capacity": "20",
+    "covered": "yes",
+    "fee": "yes",
+    "name": "Fahrradbox Bf Höntrop",
+    "operator": "Kienzler DeinRadschloss",
+    "website": "https://www.dein-radschloss.de/boxbuchen/?preselect_unit_uid=202"
+  }
+},
+{
+  "type": "node",
+  "id": 6301320632,
+  "lat": 51.4684523,
+  "lon": 7.2296999,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "lockers",
+    "capacity": "10",
+    "covered": "yes",
+    "fee": "yes",
+    "name": "Fahrradbox Neues Gymnasium",
+    "operator": "Kienzler DeinRadschloss",
+    "website": "https://www.dein-radschloss.de/boxbuchen/?preselect_unit_uid=206"
+  }
+},
+{
+  "type": "node",
+  "id": 6301346809,
+  "lat": 51.5102630,
+  "lon": 7.2113668,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "lockers",
+    "capacity": "10",
+    "covered": "yes",
+    "fee": "yes",
+    "name": "Fahrradbox Riemker Markt",
+    "operator": "Kienzler DeinRadschloss",
+    "website": "https://www.dein-radschloss.de/boxbuchen/?preselect_unit_uid=207"
+  }
+},
+{
+  "type": "node",
+  "id": 6301357826,
+  "lat": 51.4632942,
+  "lon": 7.2328810,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "lockers",
+    "capacity": "10",
+    "covered": "yes",
+    "fee": "yes",
+    "name": "Fahrradbox U35 Wasserstraße",
+    "operator": "Kienzler DeinRadschloss",
+    "website": "https://www.dein-radschloss.de/boxbuchen/?preselect_unit_uid=208"
+  }
+},
+{
+  "type": "node",
+  "id": 6301363737,
+  "lat": 51.4737529,
+  "lon": 7.1404093,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "lockers",
+    "capacity": "20",
+    "covered": "yes",
+    "fee": "yes",
+    "name": "Fahrradbox Bf Wattenscheid",
+    "operator": "Kienzler DeinRadschloss",
+    "website": "https://www.dein-radschloss.de/boxbuchen/?preselect_unit_uid=209"
+  }
+},
+{
+  "type": "node",
+  "id": 6305462974,
+  "lat": 51.4574705,
+  "lon": 7.2377967,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "lockers",
+    "capacity": "9",
+    "fee": "yes",
+    "name": "Fahrradbox U35 Brenscheder Str.",
+    "operator": "Kienzler DeinRadschloss",
+    "website": "https://www.dein-radschloss.de/boxbuchen/?preselect_unit_uid=198"
+  }
+},
+{
+  "type": "node",
+  "id": 6313077440,
+  "lat": 51.4803882,
+  "lon": 7.2839352,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "no",
+    "fee": "no",
+    "smoothness": "good",
+    "supervised": "no",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 6354812472,
+  "lat": 51.4705443,
+  "lon": 7.3152526,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "8",
+    "covered": "no",
+    "fee": "no",
+    "lit": "yes",
+    "smoothness": "good",
+    "supervised": "no",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 6364328849,
+  "lat": 51.4755312,
+  "lon": 7.2159252,
+  "tags": {
+    "access": "customers",
+    "alt_name": "DeinRadschloss",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "lockers",
+    "capacity": "10",
+    "fee": "yes",
+    "lit": "yes",
+    "loc_name": "DeinRadschloss",
+    "name": "DeinRadschloss",
+    "official_name": "DeinRadschloss",
+    "operator": "Kienzler DeinRadschloss"
+  }
+},
+{
+  "type": "node",
+  "id": 6374029217,
+  "lat": 51.4814580,
+  "lon": 7.2246213,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "7",
+    "covered": "no",
+    "smoothness": "good",
+    "surface": "sett"
+  }
+},
+{
+  "type": "node",
+  "id": 6374130255,
+  "lat": 51.4809256,
+  "lon": 7.2100319,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "15",
+    "covered": "no",
+    "fee": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6385137990,
+  "lat": 51.4820908,
+  "lon": 7.2182375,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "4",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6385137991,
+  "lat": 51.4820902,
+  "lon": 7.2183268,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6385137998,
+  "lat": 51.4818191,
+  "lon": 7.2179837,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "8",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6387285810,
+  "lat": 51.4263836,
+  "lon": 7.1613098,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "2",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6387748160,
+  "lat": 51.4681112,
+  "lon": 7.3064220,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "8",
+    "covered": "no",
+    "smoothness": "good",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 6401304737,
+  "lat": 51.5187631,
+  "lon": 7.2782559,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "no",
+    "fee": "no",
+    "lit": "yes",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 6401304738,
+  "lat": 51.5186766,
+  "lon": 7.2782573,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "no",
+    "fee": "no",
+    "lit": "yes",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 6401304741,
+  "lat": 51.5189770,
+  "lon": 7.2789970,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "no",
+    "fee": "no",
+    "lit": "yes",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 6401304747,
+  "lat": 51.5189976,
+  "lon": 7.2795366,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "no",
+    "fee": "no",
+    "lit": "yes",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 6411053621,
+  "lat": 51.4748611,
+  "lon": 7.3058440,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "no",
+    "smoothness": "good",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 6411463484,
+  "lat": 51.4833498,
+  "lon": 7.2872449,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "no",
+    "smoothness": "good",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 6412416884,
+  "lat": 51.4784163,
+  "lon": 7.2182302,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "no",
+    "fixme": "Position"
+  }
+},
+{
+  "type": "node",
+  "id": 6449660055,
+  "lat": 51.4296178,
+  "lon": 7.1664213,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "2",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6449660056,
+  "lat": 51.4296276,
+  "lon": 7.1664391,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "2",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6453942285,
+  "lat": 51.4404825,
+  "lon": 7.2118349,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "12",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6457087479,
+  "lat": 51.4722084,
+  "lon": 7.2504945,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "no",
+    "fee": "no",
+    "smoothness": "good",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 6458402116,
+  "lat": 51.4938996,
+  "lon": 7.2285417,
+  "tags": {
+    "amenity": "bicycle_parking"
+  }
+},
+{
+  "type": "node",
+  "id": 6466468487,
+  "lat": 51.4912323,
+  "lon": 7.3019607,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "no",
+    "fee": "no",
+    "smoothness": "good",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 6469898046,
+  "lat": 51.4799231,
+  "lon": 7.2243747,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "10",
+    "covered": "no",
+    "fee": "no",
+    "smoothness": "good",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 6478100190,
+  "lat": 51.4752208,
+  "lon": 7.3048196,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "4",
+    "covered": "no",
+    "lit": "yes",
+    "smoothness": "good",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 6513805410,
+  "lat": 51.4799391,
+  "lon": 7.2171860,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6513805424,
+  "lat": 51.4836033,
+  "lon": 7.2157283,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "10",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6518234616,
+  "lat": 51.4869679,
+  "lon": 7.3073172,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "covered": "no",
+    "fee": "no",
+    "smoothness": "good",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 6534443826,
+  "lat": 51.4717472,
+  "lon": 7.2132973,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "8",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6543139155,
+  "lat": 51.4299750,
+  "lon": 7.1517904,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "20",
+    "covered": "no",
+    "fee": "no",
+    "lit": "yes",
+    "opening_hours": "24/7"
+  }
+},
+{
+  "type": "node",
+  "id": 6555577891,
+  "lat": 51.4796259,
+  "lon": 7.2054486,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6563041026,
+  "lat": 51.4214788,
+  "lon": 7.1476893,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "lockers",
+    "capacity": "3",
+    "covered": "yes",
+    "opening_hours": "24/7",
+    "surface": "gravel"
+  }
+},
+{
+  "type": "node",
+  "id": 6563705989,
+  "lat": 51.4712679,
+  "lon": 7.2127874,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "4",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6563706068,
+  "lat": 51.4819776,
+  "lon": 7.2165473,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6564268431,
+  "lat": 51.4257714,
+  "lon": 7.1647990,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "4",
+    "covered": "no",
+    "fee": "No"
+  }
+},
+{
+  "type": "node",
+  "id": 6566371746,
+  "lat": 51.4729115,
+  "lon": 7.2863737,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "10",
+    "covered": "no",
+    "fee": "no",
+    "lit": "no",
+    "opening_hours": "24/7",
+    "surface": "compacted"
+  }
+},
+{
+  "type": "node",
+  "id": 6575146173,
+  "lat": 51.4834673,
+  "lon": 7.2131264,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "12",
+    "covered": "no",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 6579828615,
+  "lat": 51.4798274,
+  "lon": 7.2199653,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "4",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6588962469,
+  "lat": 51.4767054,
+  "lon": 7.3026952,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "4",
+    "covered": "no",
+    "fee": "no",
+    "lit": "yes",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 6734020038,
+  "lat": 51.4272649,
+  "lon": 7.1450624,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "8"
+  }
+},
+{
+  "type": "node",
+  "id": 6757750120,
+  "lat": 51.4365311,
+  "lon": 7.2767583,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "15",
+    "covered": "no",
+    "fee": "no",
+    "lit": "no",
+    "opening_hours": "24/7",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "node",
+  "id": 6758044324,
+  "lat": 51.4797567,
+  "lon": 7.2197853,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6760501432,
+  "lat": 51.4490361,
+  "lon": 7.1480799,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6762335587,
+  "lat": 51.4267641,
+  "lon": 7.1430834,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "6",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6762335589,
+  "lat": 51.4265279,
+  "lon": 7.1439772,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "6",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6781582587,
+  "lat": 51.4572543,
+  "lon": 7.1756017,
+  "tags": {
+    "amenity": "bicycle_parking"
+  }
+},
+{
+  "type": "node",
+  "id": 6781582604,
+  "lat": 51.4444286,
+  "lon": 7.1717632,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "3",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6781582614,
+  "lat": 51.4373925,
+  "lon": 7.1734087,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "6",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6792094221,
+  "lat": 51.4283159,
+  "lon": 7.2429484,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "operator": "Provinzial",
+    "operator:type": "private"
+  }
+},
+{
+  "type": "node",
+  "id": 6792094224,
+  "lat": 51.4283502,
+  "lon": 7.2432133,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "4",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6792170779,
+  "lat": 51.4514916,
+  "lon": 7.1925388,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "7",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6792170783,
+  "lat": 51.4629042,
+  "lon": 7.2030172,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6792219413,
+  "lat": 51.4214391,
+  "lon": 7.2117201,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "30",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6819483849,
+  "lat": 51.4796010,
+  "lon": 7.2204060,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "6",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6819483866,
+  "lat": 51.4773709,
+  "lon": 7.2171612,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "10",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6821776171,
+  "lat": 51.4826060,
+  "lon": 7.2172177,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "6",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6828106530,
+  "lat": 51.4805300,
+  "lon": 7.2213345,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "1",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6831477986,
+  "lat": 51.4817870,
+  "lon": 7.2179929,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "6",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6847723143,
+  "lat": 51.4572205,
+  "lon": 7.2204564,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "2",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6903775528,
+  "lat": 51.4828793,
+  "lon": 7.2200610,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "4",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6903775539,
+  "lat": 51.4849850,
+  "lon": 7.2152357,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "8",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6912763483,
+  "lat": 51.4772494,
+  "lon": 7.3024772,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "4",
+    "covered": "no",
+    "smoothness": "good",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 6914058306,
+  "lat": 51.4799662,
+  "lon": 7.1379683,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "2",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6914058308,
+  "lat": 51.4800589,
+  "lon": 7.1379747,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "6"
+  }
+},
+{
+  "type": "node",
+  "id": 6914058309,
+  "lat": 51.4800974,
+  "lon": 7.1379921,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "12"
+  }
+},
+{
+  "type": "node",
+  "id": 6914058321,
+  "lat": 51.4805270,
+  "lon": 7.1367238,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "2",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6914058322,
+  "lat": 51.4805374,
+  "lon": 7.1366883,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "2",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6914058337,
+  "lat": 51.4811668,
+  "lon": 7.1349415,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "4",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6914058338,
+  "lat": 51.4811238,
+  "lon": 7.1349656,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "4",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6921086814,
+  "lat": 51.4857779,
+  "lon": 7.2266687,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "covered": "no",
+    "fee": "no",
+    "lit": "yes",
+    "opening_hours": "24/7",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 6925701025,
+  "lat": 51.5195560,
+  "lon": 7.2767871,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "2",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6925701026,
+  "lat": 51.5195768,
+  "lon": 7.2767404,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "2",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6925701030,
+  "lat": 51.5197757,
+  "lon": 7.2762781,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "2",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6925749843,
+  "lat": 51.4412766,
+  "lon": 7.2133535,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "6",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6938491810,
+  "lat": 51.4724569,
+  "lon": 7.2168116,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "14",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6938491811,
+  "lat": 51.4722334,
+  "lon": 7.2169035,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "14",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6959939044,
+  "lat": 51.4800060,
+  "lon": 7.2480478,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "covered": "no",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 6959939058,
+  "lat": 51.4800142,
+  "lon": 7.2481197,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "covered": "no",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 6976121703,
+  "lat": 51.4890979,
+  "lon": 7.2137197,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "10",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6976121708,
+  "lat": 51.4916281,
+  "lon": 7.2134015,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6976121761,
+  "lat": 51.5101707,
+  "lon": 7.2111698,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "12",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6976121771,
+  "lat": 51.5136333,
+  "lon": 7.2113705,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "10",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7024008687,
+  "lat": 51.4327587,
+  "lon": 7.1888951,
+  "tags": {
+    "access": "customers",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "rack",
+    "capacity": "10",
+    "covered": "no",
+    "fee": "no",
+    "operator": "SV Waldesrand Bochum Linden / Sundern 1928 e.V.",
+    "surface": "compacted"
+  }
+},
+{
+  "type": "node",
+  "id": 7025314079,
+  "lat": 51.4803052,
+  "lon": 7.1349291,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "10",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7025314080,
+  "lat": 51.4804990,
+  "lon": 7.1349580,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "8",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7025325585,
+  "lat": 51.4806710,
+  "lon": 7.1351566,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "8",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7064911568,
+  "lat": 51.4648498,
+  "lon": 7.2582711,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "8",
+    "covered": "no",
+    "fee": "no",
+    "smoothness": "good",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 7101682741,
+  "lat": 51.4528428,
+  "lon": 7.2478658,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "20",
+    "covered": "no",
+    "lit": "yes",
+    "surface": "dirt"
+  }
+},
+{
+  "type": "node",
+  "id": 7149422783,
+  "lat": 51.4651490,
+  "lon": 7.1512596,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "24",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7158917048,
+  "lat": 51.4482105,
+  "lon": 7.2300756,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "6",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7158917055,
+  "lat": 51.4516890,
+  "lon": 7.2315774,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "6",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7158917057,
+  "lat": 51.4517569,
+  "lon": 7.2315816,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "6",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7193136314,
+  "lat": 51.5185490,
+  "lon": 7.2797501,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "covered": "no",
+    "fee": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7193136681,
+  "lat": 51.5185238,
+  "lon": 7.2798528,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "covered": "no",
+    "fee": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7193147943,
+  "lat": 51.5195142,
+  "lon": 7.2777497,
+  "tags": {
+    "amenity": "bicycle_parking"
+  }
+},
+{
+  "type": "node",
+  "id": 7200949047,
+  "lat": 51.4739563,
+  "lon": 7.3082437,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "12",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7201248137,
+  "lat": 51.4913603,
+  "lon": 7.3062042,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "covered": "no",
+    "fee": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7201254906,
+  "lat": 51.4814577,
+  "lon": 7.3230511,
+  "tags": {
+    "access": "customers",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7201276509,
+  "lat": 51.4815236,
+  "lon": 7.3242614,
+  "tags": {
+    "access": "customers",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7201277631,
+  "lat": 51.4919256,
+  "lon": 7.3076327,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "no",
+    "fee": "no",
+    "smoothness": "good",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 7203882759,
+  "lat": 51.4913034,
+  "lon": 7.3060286,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wide_stands",
+    "capacity": "6",
+    "covered": "no",
+    "fee": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7203882760,
+  "lat": 51.4916638,
+  "lon": 7.3079786,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "6",
+    "covered": "no",
+    "fee": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7228363855,
+  "lat": 51.4164026,
+  "lon": 7.2348471,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "5",
+    "covered": "no",
+    "fee": "no",
+    "lit": "yes",
+    "opening_hours": "24/7",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 7258064493,
+  "lat": 51.4478296,
+  "lon": 7.2691152,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "18",
+    "covered": "no",
+    "fee": "no",
+    "smoothness": "good",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 7258064495,
+  "lat": 51.4476509,
+  "lon": 7.2692127,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "16",
+    "covered": "no",
+    "fee": "no",
+    "smoothness": "good",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "node",
+  "id": 7263947946,
+  "lat": 51.4420227,
+  "lon": 7.1413868,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "9",
+    "covered": "no",
+    "lit": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7266562470,
+  "lat": 51.4861721,
+  "lon": 7.3076512,
+  "tags": {
+    "access": "customers",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "4",
+    "covered": "no",
+    "fee": "no",
+    "lit": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7266608296,
+  "lat": 51.4869353,
+  "lon": 7.3074035,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "no",
+    "fee": "no",
+    "lit": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7280452131,
+  "lat": 51.4727606,
+  "lon": 7.2863485,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "10",
+    "covered": "no",
+    "fee": "no",
+    "lit": "no",
+    "opening_hours": "24/7",
+    "surface": "compacted"
+  }
+},
+{
+  "type": "node",
+  "id": 7316453445,
+  "lat": 51.4259825,
+  "lon": 7.1403329,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "12",
+    "covered": "no",
+    "fee": "no",
+    "lit": "no",
+    "opening_hours": "24/7",
+    "supervised": "no",
+    "surface": "fine_gravel"
+  }
+},
+{
+  "type": "node",
+  "id": 7375419165,
+  "lat": 51.4929034,
+  "lon": 7.3081825,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "3",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7377484654,
+  "lat": 51.4614975,
+  "lon": 7.2015997,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "6"
+  }
+},
+{
+  "type": "node",
+  "id": 7380351248,
+  "lat": 51.4950386,
+  "lon": 7.2854808,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "6",
+    "covered": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7385010019,
+  "lat": 51.4634561,
+  "lon": 7.2314070,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "5",
+    "fee": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7385010020,
+  "lat": 51.4689896,
+  "lon": 7.2272750,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "fee": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7385010021,
+  "lat": 51.4691107,
+  "lon": 7.2268121,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "no",
+    "fee": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7391495123,
+  "lat": 51.4470469,
+  "lon": 7.2445400,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "20"
+  }
+},
+{
+  "type": "node",
+  "id": 7395382399,
+  "lat": 51.4522519,
+  "lon": 7.2439749,
+  "tags": {
+    "amenity": "bicycle_parking"
+  }
+},
+{
+  "type": "node",
+  "id": 7493935157,
+  "lat": 51.4482817,
+  "lon": 7.2589029,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "5",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7494277509,
+  "lat": 51.4482066,
+  "lon": 7.2592106,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "5",
+    "covered": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7537540993,
+  "lat": 51.4826422,
+  "lon": 7.2197607,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "12",
+    "lit": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7554717768,
+  "lat": 51.4811699,
+  "lon": 7.2187176,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "8",
+    "fee": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7617581855,
+  "lat": 51.4890397,
+  "lon": 7.2142684,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle": "stands",
+    "capacity": "3"
+  }
+},
+{
+  "type": "node",
+  "id": 7617599149,
+  "lat": 51.4922870,
+  "lon": 7.2129589,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops"
+  }
+},
+{
+  "type": "node",
+  "id": 7617606786,
+  "lat": 51.4913438,
+  "lon": 7.2145081,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "6"
+  }
+},
+{
+  "type": "node",
+  "id": 7620163754,
+  "lat": 51.4741045,
+  "lon": 7.2150874,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7640314540,
+  "lat": 51.4735785,
+  "lon": 7.2160628,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "8",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7660624283,
+  "lat": 51.4840648,
+  "lon": 7.2181507,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7660683797,
+  "lat": 51.4818611,
+  "lon": 7.2165676,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "6",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7670825246,
+  "lat": 51.4717656,
+  "lon": 7.2473312,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "4"
+  }
+},
+{
+  "type": "node",
+  "id": 7721603376,
+  "lat": 51.4758945,
+  "lon": 7.2284127,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_mounted",
+    "capacity": "7",
+    "covered": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7773874352,
+  "lat": 51.4783149,
+  "lon": 7.2140686,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops"
+  }
+},
+{
+  "type": "node",
+  "id": 7774264182,
+  "lat": 51.4779381,
+  "lon": 7.2080286,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "36"
+  }
+},
+{
+  "type": "node",
+  "id": 7774321141,
+  "lat": 51.4775659,
+  "lon": 7.2070724,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "8"
+  }
+},
+{
+  "type": "node",
+  "id": 7780270547,
+  "lat": 51.4408862,
+  "lon": 7.2125763,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "6"
+  }
+},
+{
+  "type": "node",
+  "id": 7798658280,
+  "lat": 51.4845129,
+  "lon": 7.2160013,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "4",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7800878522,
+  "lat": 51.4123998,
+  "lon": 7.2345797,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "5",
+    "fee": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7831895444,
+  "lat": 51.4783048,
+  "lon": 7.3024757,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "6",
+    "covered": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7832011563,
+  "lat": 51.4733327,
+  "lon": 7.2259434,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "covered": "yes",
+    "level": "0"
+  }
+},
+{
+  "type": "node",
+  "id": 7832032830,
+  "lat": 51.4731239,
+  "lon": 7.2260133,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7832056353,
+  "lat": 51.4788514,
+  "lon": 7.2208315,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "6",
+    "covered": "yes",
+    "operator": "Herz Apotheke",
+    "operator:type": "private"
+  }
+},
+{
+  "type": "node",
+  "id": 7832076339,
+  "lat": 51.4802823,
+  "lon": 7.2233249,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "6"
+  }
+},
+{
+  "type": "node",
+  "id": 7832105878,
+  "lat": 51.4771659,
+  "lon": 7.2167720,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "3"
+  }
+},
+{
+  "type": "node",
+  "id": 7832115635,
+  "lat": 51.4762846,
+  "lon": 7.2162191,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "4",
+    "covered": "no",
+    "operator": "Miss Hops",
+    "operator:type": "private"
+  }
+},
+{
+  "type": "node",
+  "id": 7832118976,
+  "lat": 51.4774440,
+  "lon": 7.2166070,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "6",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7832136821,
+  "lat": 51.4780090,
+  "lon": 7.2177546,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "5"
+  }
+},
+{
+  "type": "node",
+  "id": 7832138615,
+  "lat": 51.4790099,
+  "lon": 7.2223980,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "covered": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7863009184,
+  "lat": 51.4409979,
+  "lon": 7.2102054,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "6",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7899791548,
+  "lat": 51.4880080,
+  "lon": 7.2126952,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "covered": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7922214603,
+  "lat": 51.4823183,
+  "lon": 7.2189535,
+  "tags": {
+    "access": "customers",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "4",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7922225657,
+  "lat": 51.4819090,
+  "lon": 7.2175188,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "4",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7924855782,
+  "lat": 51.4838688,
+  "lon": 7.2256053,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops"
+  }
+},
+{
+  "type": "node",
+  "id": 7924855784,
+  "lat": 51.4841359,
+  "lon": 7.2246395,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops"
+  }
+},
+{
+  "type": "node",
+  "id": 7945707956,
+  "lat": 51.4748892,
+  "lon": 7.2658219,
+  "tags": {
+    "amenity": "bicycle_parking"
+  }
+},
+{
+  "type": "node",
+  "id": 7947968757,
+  "lat": 51.4702890,
+  "lon": 7.2904248,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "2",
+    "covered": "no",
+    "lit": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7947968759,
+  "lat": 51.4700720,
+  "lon": 7.2908614,
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "2",
+    "covered": "no",
+    "lit": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7959915722,
+  "lat": 51.4737733,
+  "lon": 7.3239098,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "3",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7963864984,
+  "lat": 51.4808784,
+  "lon": 7.2881461,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "2",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7963982819,
+  "lat": 51.4834684,
+  "lon": 7.2895633,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "5",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7964016629,
+  "lat": 51.4828820,
+  "lon": 7.2868846,
+  "tags": {
+    "access": "customers",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "4",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7964372340,
+  "lat": 51.4877283,
+  "lon": 7.3041331,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "5",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7964372341,
+  "lat": 51.4956930,
+  "lon": 7.3062661,
+  "tags": {
+    "access": "private",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "2",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7964386558,
+  "lat": 51.4938542,
+  "lon": 7.3038883,
+  "tags": {
+    "access": "private",
+    "amenity": "bicycle_parking",
+    "bic": "stands",
+    "capacity": "2",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7964450913,
+  "lat": 51.4932329,
+  "lon": 7.3042205,
+  "tags": {
+    "access": "private",
+    "amenity": "bicycle_parking",
+    "bic": "stands",
+    "capacity": "2",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7964453470,
+  "lat": 51.4934600,
+  "lon": 7.3041046,
+  "tags": {
+    "access": "private",
+    "amenity": "bicycle_parking",
+    "bic": "stands",
+    "capacity": "2",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7964462177,
+  "lat": 51.4846486,
+  "lon": 7.3009776,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "16",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7964462179,
+  "lat": 51.4940459,
+  "lon": 7.3037878,
+  "tags": {
+    "access": "private",
+    "amenity": "bicycle_parking",
+    "bic": "stands",
+    "capacity": "2",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7964462187,
+  "lat": 51.4876879,
+  "lon": 7.3041465,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "5",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7964462188,
+  "lat": 51.4943832,
+  "lon": 7.3036641,
+  "tags": {
+    "access": "private",
+    "amenity": "bicycle_parking",
+    "bic": "stands",
+    "capacity": "2",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7964462497,
+  "lat": 51.4942887,
+  "lon": 7.3037105,
+  "tags": {
+    "access": "private",
+    "amenity": "bicycle_parking",
+    "bic": "stands",
+    "capacity": "2",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7964462601,
+  "lat": 51.4931471,
+  "lon": 7.3042663,
+  "tags": {
+    "access": "private",
+    "amenity": "bicycle_parking",
+    "bic": "stands",
+    "capacity": "2",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7964462602,
+  "lat": 51.4936513,
+  "lon": 7.3039959,
+  "tags": {
+    "access": "private",
+    "amenity": "bicycle_parking",
+    "bic": "stands",
+    "capacity": "2",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7964573210,
+  "lat": 51.4939998,
+  "lon": 7.3069582,
+  "tags": {
+    "access": "private",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wide_stands",
+    "capacity": "5",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7968358830,
+  "lat": 51.4492801,
+  "lon": 7.2040055,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "2",
+    "covered": "no",
+    "fee": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7982180327,
+  "lat": 51.4724128,
+  "lon": 7.2499985,
+  "tags": {
+    "access": "customers",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "4",
+    "covered": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 8000244021,
+  "lat": 51.4802396,
+  "lon": 7.2160569,
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "covered": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 133468411,
+  "nodes": [
+    1469045222,
+    1469045239,
+    1469045226,
+    1469045227,
+    1469045222
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "12",
+    "covered": "no",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "way",
+  "id": 143306512,
+  "nodes": [
+    1568218986,
+    1568218976,
+    1568218967,
+    1568218972,
+    1568218986
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "shed",
+    "building": "yes",
+    "capacity": "5",
+    "covered": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 149503872,
+  "nodes": [
+    1624665538,
+    1624665535,
+    1624665536,
+    1624665525,
+    1624665544,
+    1624665538
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "capacity": "100"
+  }
+},
+{
+  "type": "way",
+  "id": 160578370,
+  "nodes": [
+    1726326150,
+    1726326151,
+    1726326149,
+    1758964782,
+    1726326150
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "8",
+    "operator": "Aldi"
+  }
+},
+{
+  "type": "way",
+  "id": 223795218,
+  "nodes": [
+    2326682244,
+    2326682242,
+    2326682245,
+    2326682246,
+    2326682244
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "18",
+    "covered": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 223797626,
+  "nodes": [
+    2326684757,
+    2326684759,
+    2326684756,
+    2326684755,
+    2326684757
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "lockers",
+    "capacity": "10",
+    "covered": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 264355519,
+  "nodes": [
+    2700432988,
+    2700432982,
+    2700433004,
+    2700433020,
+    2700432988
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "10",
+    "covered": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 337766014,
+  "nodes": [
+    3448186795,
+    3448186591,
+    3448186586,
+    3448186587,
+    3448186795
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "bike_ride": "yes",
+    "building": "roof",
+    "capacity": "40",
+    "covered": "yes",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 337766015,
+  "nodes": [
+    3448186796,
+    3448186590,
+    3448186794,
+    3448186798,
+    3448186796
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "building": "roof",
+    "capacity": "18",
+    "covered": "yes",
+    "layer": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 337795980,
+  "nodes": [
+    3448534020,
+    3448534016,
+    3448534015,
+    3448534019,
+    3448534020
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "shed",
+    "building": "roof",
+    "covered": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 352774650,
+  "nodes": [
+    3585429100,
+    3585429101,
+    3585429102,
+    3585429103,
+    3585429104,
+    3585429105,
+    3585429106,
+    3585429100
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "10",
+    "covered": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 352966189,
+  "nodes": [
+    3587505356,
+    3587505357,
+    3587505358,
+    3587505359,
+    3587505356
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "rack",
+    "capacity": "6",
+    "covered": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 352966849,
+  "nodes": [
+    3587518395,
+    4345002969,
+    4345002965,
+    3587518398,
+    3587518395
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "10",
+    "covered": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 434732732,
+  "nodes": [
+    4326742532,
+    4326742541,
+    4326742547,
+    4326742545,
+    4326742532
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "14",
+    "covered": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 497011116,
+  "nodes": [
+    4886475404,
+    4886475403,
+    4886475402,
+    4886475401,
+    4886475404
+  ],
+  "tags": {
+    "access": "private",
+    "amenity": "bicycle_parking"
+  }
+},
+{
+  "type": "way",
+  "id": 510537172,
+  "nodes": [
+    4995322131,
+    4995322132,
+    4995322130,
+    4995322129,
+    4995322131
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "18",
+    "covered": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 532470502,
+  "nodes": [
+    5166919399,
+    5166919400,
+    5166919401,
+    5166919402,
+    5166919399
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "15",
+    "covered": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 532470687,
+  "nodes": [
+    5166923936,
+    5166923937,
+    5166923938,
+    5166923939,
+    5166923936
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "9",
+    "covered": "no",
+    "operator": "Lidl"
+  }
+},
+{
+  "type": "way",
+  "id": 532471526,
+  "nodes": [
+    5166924148,
+    5166924149,
+    5166924150,
+    5166924151,
+    5166924148
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "10",
+    "covered": "no",
+    "operator": "www.ruhr-park.de"
+  }
+},
+{
+  "type": "way",
+  "id": 532471888,
+  "nodes": [
+    996711873,
+    5166933250,
+    5166933251,
+    5166933252,
+    996711873
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "12",
+    "covered": "no",
+    "operator": "www.ruhr-park.de"
+  }
+},
+{
+  "type": "way",
+  "id": 532472442,
+  "nodes": [
+    5166938524,
+    5166938525,
+    5166938526,
+    5166938527,
+    5166938524
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "24",
+    "covered": "no",
+    "operator": "www.ruhr-park.de"
+  }
+},
+{
+  "type": "way",
+  "id": 532768804,
+  "nodes": [
+    5169544086,
+    5169544087,
+    5169544090,
+    5169544091,
+    5169544088,
+    5169544089,
+    5169544086
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "40",
+    "covered": "no",
+    "operator": "www.ruhr-park.de"
+  }
+},
+{
+  "type": "way",
+  "id": 532775556,
+  "nodes": [
+    5169569255,
+    5169569256,
+    5169569257,
+    5169569258,
+    5169569255
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "30",
+    "covered": "yes",
+    "operator": "www.ruhrpark.de"
+  }
+},
+{
+  "type": "way",
+  "id": 532777162,
+  "nodes": [
+    5169574423,
+    5169574424,
+    5169574425,
+    5169574426,
+    6742267411,
+    6742267412,
+    6742267413,
+    6742267410,
+    6742267409,
+    5169574423
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "24",
+    "covered": "no",
+    "lit": "yes",
+    "operator": "www.ruhrpark.de"
+  }
+},
+{
+  "type": "way",
+  "id": 553912545,
+  "nodes": [
+    5346343964,
+    5346338383,
+    5346344872,
+    5346343963,
+    5346343964
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "12",
+    "covered": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 556463911,
+  "nodes": [
+    5367942952,
+    5367942951
+  ],
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "18",
+    "covered": "no",
+    "fee": "no",
+    "lit": "yes",
+    "smoothness": "good",
+    "supervised": "no",
+    "surface": "sett"
+  }
+},
+{
+  "type": "way",
+  "id": 644570589,
+  "nodes": [
+    6061735719,
+    6061735723,
+    1330923290,
+    6061735722,
+    6061735719
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "capacity": "43",
+    "covered": "no",
+    "lit": "yes",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "way",
+  "id": 645556240,
+  "nodes": [
+    6068069523,
+    6168879096,
+    6068069546,
+    1942592875,
+    6068069728,
+    6068069523
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "covered": "no",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "way",
+  "id": 645621553,
+  "nodes": [
+    6068482421,
+    6068482422
+  ],
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "48",
+    "colour": "gray",
+    "covered": "no",
+    "material": "metal",
+    "surface": "grass_paver"
+  }
+},
+{
+  "type": "way",
+  "id": 671607311,
+  "nodes": [
+    6289307890,
+    6289307888,
+    6289307892,
+    6289307889,
+    6289307890
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "4",
+    "covered": "no",
+    "fee": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 672015362,
+  "nodes": [
+    6293161455,
+    6293161456,
+    6293161459,
+    6393721188,
+    6293161457,
+    6293161458,
+    6293161455
+  ],
+  "tags": {
+    "access": "private",
+    "amenity": "bicycle_parking",
+    "capacity": "50",
+    "covered": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 679730105,
+  "nodes": [
+    6364626637,
+    6364626636,
+    6364626635,
+    6364626634,
+    6364626637
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "informal",
+    "capacity": "34",
+    "covered": "no",
+    "name": "Dummy"
+  }
+},
+{
+  "type": "way",
+  "id": 682205315,
+  "nodes": [
+    7136952838,
+    7136952846,
+    6388667344,
+    6388667340,
+    6388667345,
+    6388667334,
+    6388667333,
+    6388667341,
+    7136952844,
+    6388667332,
+    6388667338,
+    6388667339,
+    6388667335,
+    6388667336,
+    6388667342,
+    7136952838
+  ],
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "14",
+    "covered": "no",
+    "park_ride": "yes",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "way",
+  "id": 682215699,
+  "nodes": [
+    6388759377,
+    6388759378,
+    6388759379,
+    6388759380,
+    6388759377
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "28",
+    "covered": "no",
+    "fee": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 714455540,
+  "nodes": [
+    6715807100,
+    6715807098,
+    6860431857,
+    6860431865,
+    6715807102,
+    6715807099,
+    6715807103,
+    6715807101,
+    6715807100
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "30",
+    "covered": "no",
+    "smoothness": "good",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "way",
+  "id": 719995405,
+  "nodes": [
+    6757750119,
+    6757750116,
+    6757750117,
+    6757750118,
+    6757750119
+  ],
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "lockers",
+    "building": "yes",
+    "capacity": "6",
+    "covered": "yes",
+    "generator:method": "photovoltaic",
+    "generator:output:electricity": "yes",
+    "generator:source": "solar",
+    "generator:type": "solar_photovoltaic_panel",
+    "opening_hours": "24/7",
+    "power": "generator",
+    "surface": "metal"
+  }
+},
+{
+  "type": "way",
+  "id": 727697525,
+  "nodes": [
+    6819483830,
+    6819483831,
+    6838004063,
+    6838004014,
+    6838004064,
+    6838004065,
+    6838004066,
+    6819483832,
+    6819483833,
+    6819483830
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "18",
+    "covered": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 728808252,
+  "nodes": [
+    6828106521,
+    6828106522,
+    6828106523,
+    6828106524,
+    6828106521
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "6",
+    "covered": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 728808253,
+  "nodes": [
+    6828106526,
+    6828106527,
+    6828106528,
+    6828106529,
+    6828106526
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "10",
+    "covered": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 728808254,
+  "nodes": [
+    6828106531,
+    6828106532,
+    6828106533,
+    6828106534,
+    6828106531
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "6",
+    "covered": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 728808255,
+  "nodes": [
+    6828106535,
+    6828106536,
+    6828106537,
+    6828106538,
+    6828106535
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "bollard",
+    "capacity": "8",
+    "covered": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 758609439,
+  "nodes": [
+    7085015235,
+    6516610099,
+    7085015241,
+    7085015242,
+    7085015235
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "20",
+    "covered": "yes",
+    "level": "0",
+    "smoothness": "good",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "way",
+  "id": 763219844,
+  "nodes": [
+    7131891523,
+    6301295536,
+    7131887677,
+    7131891505,
+    7131891523
+  ],
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "lockers",
+    "capacity": "10",
+    "covered": "yes",
+    "description": "DeinRadschloss – Fahrradboxen oder Sammelabstellanlagen mit elektronischem Schließsystem an Verknüpfungspunkten zum ÖPNV. Online suchen, buchen und bezahlen. Öffnen der Anlagen mit PIN-Code oder Chipkarte. Kurzzeit- und Langzeitmiete.",
+    "fee": "yes",
+    "name": "Fahrradbox U35 Hustadt",
+    "operator": "Kienzler DeinRadschloss",
+    "website": "https://www.dein-radschloss.de/boxbuchen/?preselect_unit_uid=203"
+  }
+},
+{
+  "type": "way",
+  "id": 763929396,
+  "nodes": [
+    7136952841,
+    6301310812,
+    7136952839,
+    7136952843,
+    7136952841
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "lockers",
+    "capacity": "24",
+    "covered": "yes",
+    "description": "DeinRadschloss – Fahrradboxen oder Sammelabstellanlagen mit elektronischem Schließsystem an Verknüpfungspunkten zum ÖPNV. Online suchen, buchen und bezahlen. Öffnen der Anlagen mit PIN-Code oder Chipkarte. Kurzzeit- und Langzeitmiete.",
+    "fee": "yes",
+    "level": "0",
+    "name": "Fahrradbox Bf Langendreer",
+    "network": "VRR",
+    "operator": "Kienzler DeinRadschloss",
+    "website": "https://www.dein-radschloss.de/boxbuchen/?preselect_unit_uid=204"
+  }
+},
+{
+  "type": "way",
+  "id": 768629182,
+  "nodes": [
+    7175910067,
+    7175910068,
+    7175910069,
+    7175910070,
+    7175910067
+  ],
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "10",
+    "covered": "no",
+    "fee": "no",
+    "operator": "Lidl",
+    "operator:type": "private"
+  }
+},
+{
+  "type": "way",
+  "id": 770030942,
+  "nodes": [
+    7188552958,
+    7188552959,
+    7188552960,
+    7188552961,
+    7188552958
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "8",
+    "covered": "no",
+    "fee": "no",
+    "operator": "Netto",
+    "operator:type": "business"
+  }
+},
+{
+  "type": "way",
+  "id": 788238675,
+  "nodes": [
+    7369587615,
+    7369587614,
+    7369587613,
+    7369587612,
+    7369587615
+  ],
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "lockers",
+    "building": "yes",
+    "capacity": "12",
+    "name": "E-Bike Garage",
+    "operator": "Stadt Bochum",
+    "website": "https://e-bike-garage.de/"
+  }
+},
+{
+  "type": "way",
+  "id": 794759837,
+  "nodes": [
+    7433594170,
+    7433594171,
+    7433594172,
+    7433594173,
+    7433594170
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "fee": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 799104901,
+  "nodes": [
+    1348053913,
+    7473485147,
+    7473485148,
+    7473485146,
+    1080570087,
+    1348053913
+  ],
+  "tags": {
+    "access": "customers",
+    "amenity": "bicycle_parking",
+    "capacity": "5",
+    "covered": "no",
+    "fee": "no",
+    "operator": "Staples",
+    "park_ride": "no",
+    "smoothness": "good",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "way",
+  "id": 828187032,
+  "nodes": [
+    7731670126,
+    7731670125,
+    7731670124,
+    7731670123,
+    7731670126
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands"
+  }
+},
+{
+  "type": "way",
+  "id": 828187041,
+  "nodes": [
+    7731670145,
+    7731670142,
+    7731670143,
+    7731670144,
+    7731670145
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands"
+  }
+},
+{
+  "type": "way",
+  "id": 834758664,
+  "nodes": [
+    7792189631,
+    3533956598,
+    3533956595,
+    7792189632,
+    7792189631
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "10"
+  }
+},
+{
+  "type": "way",
+  "id": 834758665,
+  "nodes": [
+    7792189634,
+    7792189633,
+    7792189630,
+    7792189629,
+    7792189634
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "3"
+  }
+},
+{
+  "type": "way",
+  "id": 837525012,
+  "nodes": [
+    7816794164,
+    7816794157,
+    7816794158,
+    7816794145,
+    7816794164
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "wall_loops",
+    "covered": "yes",
+    "lit": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 856642144,
+  "nodes": [
+    7987079248,
+    7987079256,
+    7987079250,
+    7987079263,
+    7987079282,
+    7987079276,
+    7987079253,
+    7987079277,
+    7987079259,
+    7987079261,
+    7987079248
+  ],
+  "tags": {
+    "amenity": "bicycle_parking",
+    "covered": "no",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "way",
+  "id": 857302751,
+  "nodes": [
+    6379372108,
+    7992891767,
+    7992891760,
+    7992891771,
+    6379372108
+  ],
+  "tags": {
+    "access": "yes",
+    "amenity": "bicycle_parking",
+    "bicycle_parking": "stands",
+    "capacity": "20",
+    "covered": "no",
+    "fee": "no",
+    "surface": "paving_stones"
+  }
+}
+
+  ]
+}

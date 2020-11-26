@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.springframework.org/schema/mvc">
+<head>
+
+    <title>Radverkehrstools</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+	<link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://unpkg.com/vue"></script>
+
+</head>
+
+
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="/">Radverkehrstools</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="radinfrastruktur">Radinfrastruktur <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="unfallatlas-analyse">Unfallatlas Daten</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="fahrzeiten">Vergleich Fahrzeiten</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Stadt suchen" aria-label="Search">
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+
+<div class="global-container">
+	<div class="control-container">
+	<h3>Auswählen welche Kategorien angezeigt werden sollen {{checked}} </h3>
+	<ul>
+		<li>
+            <div><input type="checkbox" id="cb_bicycleparking" name="bicycleparking" value="parking" @change="togglevisibility" v-model="checked">
+                <label for="cb_bicycleparking">Fahrradparkplätze</label></div>
+            <div id="bicycleparking_parameters" v-if="checked">
+                <ul>
+                    <li><div class="range-slider">
+                        <label for="sl_capacity">Min Kapazität</label>{{minCapacity}}<input type="range"
+                         v-model="selectedMinCapacity" v-bind:min="minCapacity" v-bind:max="maxCapacity"
+                                                                             class="slider" @input="toggleParkingCapacity" id="sl_capacity">{{maxCapacity}}
+                        <span id="rs-bullet" class="rs-label">{{selectedMinCapacity}}</span>
+                    </div></li>
+                    <li>
+                        Art des Abstellplatzes
+                        <ul>
+                            <li><div><input type="checkbox" id="cb_stands" value="stands" @change="toggleParkingType" v-model="checkedparking">
+                                <label for="cb_stands">Ständer</label></div></li>
+                            <li><div><input type="checkbox" id="cb_wallloops" value="wall_loops" @change="toggleParkingType" v-model="checkedparking">
+                                <label for="cb_wallloops">Felgenhalter</label></div></li>
+                            <li><div><input type="checkbox" id="cb_boxes" value="protectedParking" @change="toggleParkingType" v-model="checkedparking">
+                                <label for="cb_boxes">Fahrradboxen und Radstation</label></div></li>
+                            <li><div><input type="checkbox" id="cd_others" value="otherParking" @change="toggleParkingType" v-model="checkedparking">
+                                <label for="cb_boxes">Sonstiges</label></div></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </li>
+		<li><input type="checkbox" id="cb_bicyclelanes" name="bicyclelane" value="lanes" @change="toggleLaneVisibility" v-model="bicyclelanes_cb">
+            <label for="cb_bicyclelanes">Radwege</label>
+            <div id="bicyclelane_parameters" v-if="bicyclelanes_cb">
+                <ul>
+                    <li>
+                        <div><input type="checkbox" id="cb_lanes" value="lanes" @change="toggleLaneType" v-model="checked_lanes">
+                        <label for="cb_bicyclelanes">Schutz und Radfahrstreifen</label> </div>
+                        <div>
+                            <ul>
+                                <li><div class="range-slider">
+                                    <label for="sl_capacity">Min Breite des Schutzstreifens</label>{{minCapacity}}<input type="range"
+                                                                                                        v-model="selectedMinCapacity" v-bind:min="minCapacity" v-bind:max="maxCapacity"
+                                                                                                        class="slider" @input="toggleParkingCapacity" id="sl_capacity">{{maxCapacity}}
+                                    <span id="rs-bullet-cyclelanewidth" class="rs-label">{{selectedMinCapacity}}</span>
+                                </div></li>
+                                <li> <div><input type="checkbox" id="cb_lane_beside_parking" value="lanes_beside_parking" @change="toggleLaneType" v-model="checked_lanes">
+                                    <label for="cb_bicyclelanes">Schutzstreifen neben Parkplatz</label> </div></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><input type="checkbox" id="cb_sidewalk" value="sidewalk" @change="toggleLaneType" v-model="checked_lanes">
+                        <label for="cb_bicyclelanes">Freigegebener Bordstein</label> </li>
+                    <li><input type="checkbox" id="cb_separat" value="separat" @change="toggleLaneType" v-model="checked_lanes">
+                        <label for="cb_bicyclelanes">Radwege auf Bürgersteig</label> </li>
+                </ul>
+            </div>
+        </li>
+        <li><input type="checkbox" id="cb_other" value="other" v-model="other">
+            <label for="cb_other">Sonstiges</label></li>
+            <ul>
+                <li><input type="checkbox" id="cb_asl" value="asl" v-model="other">
+                    <label for="cb_asl">Vorgezogener Aufstellbereich</label></li>
+                <li><input type="checkbox" id="cb_poi" value="poi" v-model="other" @change="togglePois">
+                    <label for="cb_poi">Supermärkte und Autoparkplätze</label></li>
+                <li><input type="checkbox" id="cb_barrier" value="barrier" v-model="other" @change="toggleBarrier">
+                    <label for="cb_barrier">Umlaufsperren</label></li>
+                <li><input type="checkbox" id="cb_council" value="barrier_council" v-model="other" @change="toggleCouncilBarrier">
+                    <label for="cb_council">Verwaltungskarte</label></li>
+            </ul>
+        </li>
+	</ul>
+	</div>
+	<div id="mapid" class="content-container">
+	Karte
+	</div>
+</div>
+
+<div class="footer" th:insert="fragments/footer :: footer"></div>
+
+<script th:inline="javascript">
+var data = [[${bicycleParkings}]];
+var lane_data = [[${bicyclepaths}]];
+var poi_data = [[${pois}]];
+var barrier_data = [[${barriers}]];
+var sidewalk_data = [[${sidewalks}]];
+var color_dict = {
+    green: "#33cc33",
+    red: "#e60000",
+    blue: "#3333ff",
+    purple: "#A020F0",
+    black: "#000000",
+    white: "#FFFFFF",
+};
+var pincolor_dict = {
+    wall_loops: color_dict["red"],
+    stands: color_dict["green"],
+    bollard: color_dict["green"],
+    wide_stands: color_dict["green"],
+    rack: color_dict["green"],
+    lockers: color_dict["blue"],
+    building: color_dict["blue"],
+};
+</script>
+
+<script th:inline="none">
+var app4 = new Vue({
+  el: '.control-container',
+  data: {
+    mymap: null,
+    bicycleparkingmarkers: [],
+    bicycleLaneMarkers: [],
+    poiMarkers: [],
+    barrierMarkers: [],
+    checked: false,
+    bicyclelanes_cb: false,
+    checked_lanes: ["lanes", "sidewalk", "separat"],
+    other: [],
+    maxCapacity : 0,
+    selectedMinCapacity : 0,
+    selectedMinPoiCapacity : 0,
+    poiMinCapacity : 0,
+    minCapacity : 0,
+    maxCapacity : 0,
+    councilBarrier : null,
+    checkedparking: ["stands", "wall_loops", "protectedParking", "otherParking"]
+  },
+  mounted : function(){
+    this.setupLeafletMap();
+  },
+  methods: {
+      setupLeafletMap : function(){
+        this.mymap = L.map('mapid').setView([51.5, 7.3], 11);
+         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: 'Daten stammen aus Openstreetmap'
+        }).addTo(this.mymap);
+        L.control.scale({imperial: false}).addTo(this.mymap);
+      },
+
+      initBicycleparking : function(){
+        for(var i=0; i< data.length;i++) {
+            if(data[i].latitude !== null && data[i].longitude !== "") {
+                // window.alert(data[i]);
+
+                var temp_marker = L.circleMarker([data[i].latitude, data[i].longitude], {radius : 5, color : pincolor_dict[data[i].bicycle_parking]});
+                    temp_marker.bindPopup(
+                        "Kapazitaet: "+ data[i].capacity + '<br><b>'
+                        +"Covered: "+data[i].covered + '<br><b>'
+                        +"Stellplatztyp: " + data[i].bicycle_parking + '</b>'
+                    )
+                    .openPopup();
+                    this.mymap.addLayer(temp_marker);
+                    this.bicycleparkingmarkers.push({marker: temp_marker, capacity: data[i].capacity, covered: data[i].covered, bicycle_parking: data[i].bicycle_parking});
+            }
+        }
+        this.minCapacity = this.bicycleparkingmarkers.reduce((min, marker) => (marker.capacity < min ? marker.capacity : min), this.bicycleparkingmarkers[0].capacity);
+        this.maxCapacity = this.bicycleparkingmarkers.reduce((max, marker) => (marker.capacity > max ? marker.capacity : max),this.bicycleparkingmarkers[0].capacity);
+        this.selectedMinCapacity = this.maxCapacity;
+      },
+
+      togglevisibility : function(){
+        if (this.bicycleparkingmarkers.length == 0){
+            this.initBicycleparking();
+            }
+        else{
+            if (!this.checked){
+                for(i=0;i<this.bicycleparkingmarkers.length;i++) {
+                    this.mymap.removeLayer(this.bicycleparkingmarkers[i].marker);
+                }
+            }
+            else{
+                for(i=0;i<this.bicycleparkingmarkers.length;i++) {
+                    this.mymap.addLayer(this.bicycleparkingmarkers[i].marker);
+                }
+            }
+        }
+      },
+
+
+       toggleParkingType : function(){
+            for(i=0;i<this.bicycleparkingmarkers.length;i++) {
+                if(this.checkedparking.includes("stands") && (this.bicycleparkingmarkers[i].bicycle_parking == "stands" || this.bicycleparkingmarkers[i].bicycle_parking == "wide_stands" || this.bicycleparkingmarkers[i].bicycle_parking == "bollard")){
+                    this.mymap.addLayer(this.bicycleparkingmarkers[i].marker);
+                }
+                else if(this.checkedparking.includes("wall_loops") && this.bicycleparkingmarkers[i].bicycle_parking == "wall_loops"){
+                    this.mymap.addLayer(this.bicycleparkingmarkers[i].marker);
+                }
+                else if(this.checkedparking.includes("protectedParking") && (this.bicycleparkingmarkers[i].bicycle_parking == "building" || this.bicycleparkingmarkers[i].bicycle_parking == "lockers")){
+                    this.mymap.addLayer(this.bicycleparkingmarkers[i].marker);
+                }
+                else if(this.checkedparking.includes("otherParking") && this.bicycleparkingmarkers[i].bicycle_parking != "stands" && this.bicycleparkingmarkers[i].bicycle_parking != "wall_loops" &&
+                 this.bicycleparkingmarkers[i].bicycle_parking != "bollard" && this.bicycleparkingmarkers[i].bicycle_parking != "building" && this.bicycleparkingmarkers[i].bicycle_parking != "lockers"){
+                    this.mymap.addLayer(this.bicycleparkingmarkers[i].marker);
+                }
+                else{
+                    this.mymap.removeLayer(this.bicycleparkingmarkers[i].marker);
+                }
+            }
+       },
+
+       toggleParkingCapacity : function(){
+            for(i=0;i<this.bicycleparkingmarkers.length;i++) {
+                var capacity = this.bicycleparkingmarkers[i].capacity;
+                if(capacity < this.selectedMinCapacity){
+                    this.mymap.removeLayer(this.bicycleparkingmarkers[i].marker);
+                }
+                else{
+                    this.mymap.addLayer(this.bicycleparkingmarkers[i].marker);
+                }
+
+            }
+
+       },
+
+       initBicycleLanes : function(){
+        var cycleway_dict = {
+            shared_lane: "purple",
+            lane: "blue",
+            sidewalk: "white",
+        };
+        for(var i=0; i < lane_data.length; i++){
+            actualLane = lane_data[i];
+            var temp_latlngs = actualLane.geometry;
+            var color;
+            if(actualLane.cycleway_right || actualLane.cycleway_left){
+                color = color_dict[cycleway_dict[actualLane.cycleway_right]];
+            }
+            else if(actualLane.sidewalk){
+                color = color_dict[cycleway_dict["white"]];
+            }
+            else{
+                color = color_dict["black"];
+            }
+            var temp_lane = new L.polyline(temp_latlngs, {color: color}).bindPopup(
+                "Maxspeed Straße: " + actualLane.maxspeed + '<br><b>'
+                +"Oberflaeche: " + actualLane.surface + '<br><b>'
+                +"Breite rechts: " + actualLane.width_right + '<br><b>'
+                +(actualLane.sidewalk == null?"":"Bürgersteig: " + actualLane.sidewalk + '<br><b>')
+                +"Breite links: " + actualLane.width_left + '<br><b>');
+            temp_lane.addTo(this.mymap);
+
+            this.bicycleLaneMarkers.push({lane: temp_lane, maxspeed: lane_data[i].maxspeed, surface: lane_data[i].surface,
+            cycleway_left: lane_data[i].cycleway_left, cycleway_right: lane_data[i].cycleway_right,
+            sidewalk_left: lane_data[i].sidewalk_left, sidewalk_right: lane_data[i].sidewalk_right});
+        }
+
+        for(var i=0;i<sidewalk_data.length;i++){
+            
+        }
+      },
+
+       toggleLaneVisibility : function(){
+        if (this.bicycleLaneMarkers.length == 0){
+            this.initBicycleLanes();
+        }
+        else{
+            if (this.bicyclelanes_cb){
+                for(i=0; i < this.bicycleLaneMarkers.length; i++){
+                    this.bicycleLaneMarkers[i].lane.addTo(this.mymap);
+                }
+            }
+            else {
+                for(i=0; i < this.bicycleLaneMarkers.length; i++){
+                    this.bicycleLaneMarkers[i].lane.remove();
+                }
+            }
+        }
+       },
+
+       toggleLaneType : function(){
+            for(i=0; i < this.bicycleLaneMarkers.length; i++){
+                if(this.bicycleLaneMarkers[i].hasOwnProperty("cycleway_right") && (this.bicycleLaneMarkers[i].cycleway_right == "lane"
+                                                    || this.bicycleLaneMarkers[i].cycleway_right == "opposite_lane"
+                                                    || this.bicycleLaneMarkers[i].cycleway_right == "track"
+                                                    || this.bicycleLaneMarkers[i].cycleway_right == "opposite_track")){
+                    if(this.checked_lanes.includes("lanes")){
+                        this.bicycleLaneMarkers[i].lane.addTo(this.mymap);
+                    }
+                    else{
+                        this.bicycleLaneMarkers[i].lane.remove();
+                    }
+                }
+                else if(this.bicycleLaneMarkers[i].hasOwnProperty("sidewalk") ){
+                    if(this.checked_lanes.includes("sidewalk")) {
+                        this.bicycleLaneMarkers[i].lane.addTo(this.mymap);
+                    }
+                    else{
+                        this.bicycleLaneMarkers[i].lane.remove();
+                    }
+                }
+                else{
+                    this.bicycleLaneMarkers[i].lane.remove();
+                }
+            }
+       },
+
+       initPoi : function(){
+            for(i=0; i < poi_data.length; i++){
+                actualPoi = poi_data[i];
+                if(actualPoi.type == "node"){
+                    var temp_marker = L.circleMarker([actualPoi.geometry[0].lat, actualPoi.geometry[0].lon], {radius : 5, color : color_dict['blue']});
+                    temp_marker.bindPopup(
+                        'Name: '+ actualPoi.name + '<br><b>'
+                    )
+                    .openPopup();
+                    var linePoiToParking = new L.polyline([actualPoi.geometry[0],[actualPoi.lat_closestParking, actualPoi.lon_closestParking]], {color: color_dict['red']});
+                    linePoiToParking.addTo(this.mymap);
+                    this.mymap.addLayer(temp_marker);
+                    if(actualPoi.parking){
+                        var polygonCarParking = new L.polygon(actualPoi.parking.geometry, {color: color_dict['blue']});
+                        polygonCarParking.addTo(this.mymap);
+                        var linePoiToCarParking = new L.polyline([actualPoi.geometry[0], [actualPoi.parking.latitude, actualPoi.parking.longitude]], {color: color_dict['green']});
+                        this.poiMarkers.push({poi: temp_marker, line: linePoiToParking, carParking: polygonCarParking, name: actualPoi.name, distance: actualPoi.minDistance});
+                    }
+                    else{
+                        this.poiMarkers.push({poi: temp_marker, line: linePoiToParking, name: actualPoi.name, distance: actualPoi.minDistance});
+                    }
+                }
+                else { // type = way
+                    continue;
+                }
+            }
+       },
+
+       togglePois : function(){
+        if (this.poiMarkers.length == 0){
+            this.initPoi();
+        }
+        else{
+             if (!this.other.includes("poi")){
+                for(i=0;i<this.poiMarkers.length;i++) {
+                    this.mymap.removeLayer(this.poiMarkers[i].poi);
+                    this.poiMarkers[i].line.remove();
+                }
+            }
+            else{
+                for(i=0;i<this.poiMarkers.length;i++) {
+                    this.mymap.addLayer(this.poiMarkers[i].poi);
+                    this.poiMarkers[i].line.addTo(this.mymap);
+
+                }
+            }
+        }
+      },
+      initBarrier : function(){
+            var barrier_dict = {
+            yes: "green",
+            no: "red",
+            dismount: "blue",
+            };
+            for(i=0; i < barrier_data.length; i++){
+                actualBarrier = barrier_data[i];
+                var temp_marker = L.circleMarker([actualBarrier.latitude, actualBarrier.longitude], {radius : 5, color : color_dict[barrier_dict[actualBarrier.bicycle]]});
+                temp_marker.bindPopup(
+                    'Maxwidth: '+ actualBarrier.maxwidth + '<br><b>'
+                )
+                .openPopup();
+
+                this.mymap.addLayer(temp_marker);
+                this.barrierMarkers.push({barrier: temp_marker});
+
+            }
+      },
+
+      toggleBarrier : function(){
+        if (this.barrierMarkers.length == 0){
+            this.initBarrier();
+        }
+        else{
+             if (!this.other.includes("barrier")){
+                for(i=0;i<this.barrierMarkers.length;i++) {
+                    this.mymap.removeLayer(this.barrierMarkers[i].barrier);
+                }
+            }
+            else{
+                for(i=0;i<this.barrierMarkers.length;i++) {
+                    this.mymap.addLayer(this.barrierMarkers[i].barrier);
+
+                }
+            }
+        }
+      },
+      toggleCouncilBarrier : function(){
+          if (this.councilBarrier == null){
+                var imageUrl = 'http://localhost:8080/data-for-leaflet/images/umlaufsperren_pruefung_verwaltung.jpg',
+                imageBounds = [[51.40609,7.09837], [51.5297,7.3667]];
+                this.councilBarrier = L.imageOverlay(imageUrl, imageBounds);
+                this.councilBarrier.addTo(this.mymap);
+          }
+          else{
+                if(!this.other.includes("barrier_council")){
+                    this.councilBarrier.remove();
+                }
+                else{
+                    this.councilBarrier.addTo(this.mymap);
+                }
+          }
+      }
+  }
+});
+
+
+</script>
+
+
+</body>
