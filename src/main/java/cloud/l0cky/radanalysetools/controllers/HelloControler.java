@@ -2,7 +2,6 @@ package cloud.l0cky.radanalysetools.controllers;
 
 import cloud.l0cky.radanalysetools.models.*;
 import cloud.l0cky.radanalysetools.services.QueryOverpassDataService;
-import com.example.demo.models.*;
 
 import cloud.l0cky.radanalysetools.services.RoutesManager;
 import org.springframework.beans.factory.annotation.Autowired;

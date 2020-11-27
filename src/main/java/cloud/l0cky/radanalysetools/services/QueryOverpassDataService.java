@@ -1,7 +1,6 @@
 package cloud.l0cky.radanalysetools.services;
 
 import cloud.l0cky.radanalysetools.models.*;
-import com.example.demo.models.*;
 
 import org.springframework.stereotype.Service;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -23,6 +22,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @Service
 public class QueryOverpassDataService {
 	private static final String OVERPASS_BASE_URL = "https://lz4.overpass-api.de/api/interpreter";
+	private static boolean developMode = false;
 	private final String CITY = "Bochum";
 
 	private List<BicycleParking> allBicycleParkings = new ArrayList<>();
@@ -58,10 +58,7 @@ public class QueryOverpassDataService {
 
 	public void fetchBicycleParking() throws IOException, InterruptedException {
 		List<BicycleParking> actualParking= new ArrayList<BicycleParking>();
-		HttpClient client = HttpClient.newBuilder().build();
-		HttpRequest request = HttpRequest.newBuilder()
-				.uri(URI.create(OVERPASS_BASE_URL))
-				.POST(HttpRequest.BodyPublishers.ofString("data=" +
+		String queryString = "data=" +
 						"[out:json];" +
 						"(area[name=" + CITY + "];)->.searchArea;" +
 						"(" +
@@ -69,19 +66,10 @@ public class QueryOverpassDataService {
 						"way[amenity=bicycle_parking](area.searchArea);" +
 						");" +
 						"(._;>;);" +
-						"out geom;"))
-				.build();
-
-		HttpResponse response = client.send(request, HttpResponse.BodyHandlers.ofString());
-		String temp = (String) response.body();
-		System.out.println(response.statusCode());
-		System.out.println(temp);
-
+						"out geom;";
 
 		// create object mapper instance
-		ObjectMapper mapper = new ObjectMapper();
-		Map<?, ?> map = mapper.readValue(temp, Map.class);
-		List<LinkedHashMap> elements = (ArrayList)map.getOrDefault("elements",null);
+		List<LinkedHashMap> elements = this.overpassQuery(queryString);
 		if (elements == null)
 			return;
 		int i = 0;
@@ -234,18 +222,24 @@ public class QueryOverpassDataService {
 	}
 
 	private List<LinkedHashMap> overpassQuery (String queryString) throws IOException, InterruptedException{
-		HttpClient client = HttpClient.newBuilder().build();
-		HttpRequest request = HttpRequest.newBuilder()
-				.uri(URI.create(OVERPASS_BASE_URL))
-				.POST(HttpRequest.BodyPublishers.ofString(queryString))
-				.build();
-		HttpResponse response = client.send(request, HttpResponse.BodyHandlers.ofString());
-		String temp = (String) response.body();
-		// create object mapper instance
-		ObjectMapper mapper = new ObjectMapper();
-		Map<?, ?> map = mapper.readValue(temp, Map.class);
-		List<LinkedHashMap> elements = (ArrayList)map.getOrDefault("elements",null);
-		return elements;
+		if (developMode){
+			List<LinkedHashMap> tempList = new ArrayList<>();
+			return tempList;
+		}
+		else {
+			HttpClient client = HttpClient.newBuilder().build();
+			HttpRequest request = HttpRequest.newBuilder()
+					.uri(URI.create(OVERPASS_BASE_URL))
+					.POST(HttpRequest.BodyPublishers.ofString(queryString))
+					.build();
+			HttpResponse response = client.send(request, HttpResponse.BodyHandlers.ofString());
+			String temp = (String) response.body();
+			// create object mapper instance
+			ObjectMapper mapper = new ObjectMapper();
+			Map<?, ?> map = mapper.readValue(temp, Map.class);
+			List<LinkedHashMap> elements = (ArrayList) map.getOrDefault("elements", null);
+			return elements;
+		}
 	}
 
 	private void fetchPois() throws IOException, InterruptedException {
