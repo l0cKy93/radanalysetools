@@ -10,6 +10,7 @@ public class Bicyclepath {
     private String cycleway_right;
     private String trafficSign_left;
     private String trafficSign_right;
+    private boolean oneway;
     private int width_left;
     private int width_right;
     private String sidewalk;
@@ -99,5 +100,13 @@ public class Bicyclepath {
 
     public void setTrafficSign_right(String trafficSign_right) {
         this.trafficSign_right = trafficSign_right;
+    }
+
+    public boolean isOneway() {
+        return oneway;
+    }
+
+    public void setOneway(boolean oneway) {
+        this.oneway = oneway;
     }
 }

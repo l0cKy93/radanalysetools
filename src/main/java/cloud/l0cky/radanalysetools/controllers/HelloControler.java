@@ -42,10 +42,12 @@ public class HelloControler {
 		List<Bicyclepath> sidewalks = queryOverpassDataService.getSidewalks();
 		List<Poi> pois = queryOverpassDataService.getAllPois();
 		List<Barrier> barriers = queryOverpassDataService.getBarriers();
+		List<Highway> highways = queryOverpassDataService.getHighways();
 		model.addAttribute("bicyclepaths", bicyclepaths);
 		model.addAttribute("sidewalks", sidewalks);
 		model.addAttribute("pois", pois);
 		model.addAttribute("barriers", barriers);
+		model.addAttribute("highways", highways);
 		return "radinfrastruktur";
 	}
 	@GetMapping("/unfallatlas-analyse")

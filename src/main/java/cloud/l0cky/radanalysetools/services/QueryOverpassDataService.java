@@ -7,22 +7,24 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 
 import javax.annotation.PostConstruct;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.nio.file.Paths;
+import java.util.*;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @EnableScheduling
 @Service
 public class QueryOverpassDataService {
 	private static final String OVERPASS_BASE_URL = "https://lz4.overpass-api.de/api/interpreter";
-	private static boolean developMode = false;
+	private static boolean developMode = true;
 	private final String CITY = "Bochum";
 
 	private List<BicycleParking> allBicycleParkings = new ArrayList<>();
@@ -30,6 +32,7 @@ public class QueryOverpassDataService {
 	private List<Bicyclepath> sidewalks = new ArrayList<>();
 	private List<Poi> pois = new ArrayList<>();
 	private List<Barrier> barriers = new ArrayList<>();
+	private List<Highway> highways = new ArrayList<>();
 
 	public List<Poi> getAllPois() {
 		return pois;
@@ -45,6 +48,8 @@ public class QueryOverpassDataService {
 
 	public List<Barrier> getBarriers() { return barriers; }
 
+	public List<Highway> getHighways(){ return highways; }
+
 	@PostConstruct
 	@Scheduled(cron = "* * * 1 * *")
 	private void updateAllData()throws IOException, InterruptedException{
@@ -53,7 +58,7 @@ public class QueryOverpassDataService {
 		this.fetchPois();
 		this.fetchBarriers();
 		this.fetchSidewalks();
-
+		this.fetchHighways();
 	}
 
 	public void fetchBicycleParking() throws IOException, InterruptedException {
@@ -130,6 +135,7 @@ public class QueryOverpassDataService {
 			String traffic_signs = (String) tags.getOrDefault("traffic_sign", "0");
 			String traffic_signs_right = (String) tags.getOrDefault("sidewalk:right:traffic_sign", "0");
 			String traffic_signs_left = (String) tags.getOrDefault("sidewalk:left:traffic_sign", "0");
+			boolean oneway = ((String)tags.getOrDefault("oneway", "no")).equals("yes")?true:false;
 			int width_left = 0;
 			int width_right = 0;
 			try {
@@ -141,6 +147,7 @@ public class QueryOverpassDataService {
 			Bicyclepath bicyclepath = new Bicyclepath();
 			bicyclepath.setSurface(surface);
 			bicyclepath.setGeometry(geometry);
+			bicyclepath.setOneway(oneway);
 
 			if (traffic_signs.contains("DE:1022-10")) { //muss bleiben da auch left und right gesetzt sein können. Sonst wird überschrieben
 				bicyclepath.setSidewalk("both");
@@ -176,7 +183,7 @@ public class QueryOverpassDataService {
 			LinkedHashMap tags = (LinkedHashMap)element.get("tags");
 			int maxspeed = 0;
 			try {
-				maxspeed = Integer.parseInt((String) tags.getOrDefault("maxspeed", "0"));
+					maxspeed = Integer.parseInt((String) tags.getOrDefault("maxspeed", "0"));
 			}
 			catch (NumberFormatException e ){
 				continue;
@@ -185,9 +192,15 @@ public class QueryOverpassDataService {
 			String cycleway_left = (String)tags.getOrDefault("cycleway:left","0");
 			String cycleway_right = (String)tags.getOrDefault("cycleway:right","0");
 			String cycleway_both = (String)tags.getOrDefault("cycleway:both","0");
+			String cyclewaySideUnspecified =(String)tags.getOrDefault("cycleway","0");
+			boolean oneway = ((String)tags.getOrDefault("oneway", "no")).equals("yes")?true:false;
 			if (!cycleway_both.equals("0") || cycleway_right.equals("0") && cycleway_left.equals("0")){
-				cycleway_left = (String)tags.getOrDefault("cycleway:both","0");
-				cycleway_right = (String)tags.getOrDefault("cycleway:both","0");
+				cycleway_left = cycleway_both;
+				cycleway_right = cycleway_both;
+			}
+			if (!cyclewaySideUnspecified.equals("0")){
+				cycleway_left = cyclewaySideUnspecified;
+				cycleway_right = cyclewaySideUnspecified;
 			}
 			String traffic_signs_right = (String) tags.getOrDefault("cycleway:right:traffic_sign", "0");
 			String traffic_signs_left = (String) tags.getOrDefault("cycleway:left:traffic_sign", "0");
@@ -215,16 +228,76 @@ public class QueryOverpassDataService {
 			bicyclepath.setMaxspeed(maxspeed);
 			bicyclepath.setTrafficSign_left(traffic_signs_left);
 			bicyclepath.setTrafficSign_right(traffic_signs_right);
+			bicyclepath.setOneway(oneway);
 
 			actualBicyclepaths.add(bicyclepath);
 		}
 		this.allBicyclePaths = actualBicyclepaths;
 	}
 
+	private void fetchHighways() throws IOException, InterruptedException{
+			List<Highway> actualHighways= new ArrayList<Highway>();
+			String queryString = "data=[out:json];(area[name=\"Bochum\"];)->.searchArea;" +
+					"(" +
+					"way[maxspeed][highway](area.searchArea);" +
+					");" +
+					"out geom;";
+			List<LinkedHashMap> elements = this.overpassQuery(queryString);
+			if (elements == null)
+				return;
+			for (LinkedHashMap element : elements) {
+				String type = (String) element.get("type");
+				if (type.equals("node"))
+					continue;
+				LinkedHashMap tags = (LinkedHashMap) element.get("tags");
+				// Filter out Motorways
+				String highway_type = (String) tags.getOrDefault("highway","0");
+				if (highway_type.equals("motorway") || highway_type.equals("trunk") || highway_type.equals("motorway_link"))
+					continue;
+				ArrayList<LinkedHashMap> geometry = (ArrayList) element.getOrDefault("geometry", 0.);
+				// Filter out Short crossing ways
+				// TODO: Check if line is small segment in the middle of a highway
+				int length = this.getLength(geometry);
+				int maxspeed;
+				try {
+					maxspeed = Integer.parseInt((String) tags.getOrDefault("maxspeed", "0"));
+				}
+				catch (NumberFormatException e){
+					System.out.println("maxspeed of highway not numeric");
+					continue;
+				}
+				if(((String)tags.getOrDefault("highway", "0")).equals("living_street"))
+					maxspeed = 10;
+
+				boolean hasCycleway = !(((String)tags.getOrDefault("cycleway", "0")).equals("0") &&
+						((String)tags.getOrDefault("cycleway:left", "0")).equals("0") &&
+						((String)tags.getOrDefault("cycleway:right", "0")).equals("0") &&
+						((String)tags.getOrDefault("cycleway:both", "0")).equals("0"))?true:false;
+				Highway actualHighway = new Highway();
+				actualHighway.setGeometry(geometry);
+				actualHighway.setHasCycleway(hasCycleway);
+				actualHighway.setMaxspeed(maxspeed);
+				actualHighway.setLength(length);
+				actualHighways.add(actualHighway);
+			}
+			this.highways = actualHighways;
+	}
+
 	private List<LinkedHashMap> overpassQuery (String queryString) throws IOException, InterruptedException{
 		if (developMode){
 			List<LinkedHashMap> tempList = new ArrayList<>();
-			return tempList;
+			try {
+				// create object mapper instance
+				ObjectMapper mapper = new ObjectMapper();
+
+				// convert JSON file to map
+				List<LinkedHashMap> readStuff = mapper.readValue(Paths.get("src/test/resources/bufferedOverpassQuery"+ ((Integer)queryString.length()).toString() + ".json").toFile(), List.class);
+				return readStuff;
+			}
+			catch(Exception e){
+				System.out.println("error reading json");
+			}
+				return tempList;
 		}
 		else {
 			HttpClient client = HttpClient.newBuilder().build();
@@ -238,6 +311,12 @@ public class QueryOverpassDataService {
 			ObjectMapper mapper = new ObjectMapper();
 			Map<?, ?> map = mapper.readValue(temp, Map.class);
 			List<LinkedHashMap> elements = (ArrayList) map.getOrDefault("elements", null);
+
+			//write response to disk
+			String json = new ObjectMapper().writeValueAsString(elements);
+			BufferedWriter writer = new BufferedWriter(new FileWriter("src/test/resources/bufferedOverpassQuery"+ ((Integer)queryString.length()).toString() + ".json"));
+			writer.write(json);
+			writer.close();
 			return elements;
 		}
 	}
@@ -355,6 +434,24 @@ public class QueryOverpassDataService {
 		Double distance = R * c * 1000;
 
 		return distance.intValue();
+	}
+
+	private int getLength(ArrayList<LinkedHashMap> polygone)
+	{
+		if (polygone == null || polygone.size() == 0)
+			return 0;
+		double length = 0;
+		LinkedHashMap first_point = polygone.get(0);
+		double lat_old = (double) first_point.get("lat");
+		double lon_old = (double) first_point.get("lon");
+		for (int i=1; i<polygone.size(); i++) {
+			double lat_actual = (double) polygone.get(i).get("lat");
+			double lon_actual = (double) polygone.get(i).get("lon");
+			length += this.distance(lat_old, lon_old, lat_actual, lon_actual);
+			lat_old = lat_actual;
+			lon_old = lon_actual;
+		}
+		return (int)length;
 	}
 
 	private void fetchBarriers()  throws IOException, InterruptedException {

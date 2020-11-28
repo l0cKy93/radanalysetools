@@ -96,9 +96,13 @@
                         </div>
                     </li>
                     <li><input type="checkbox" id="cb_sidewalk" value="sidewalk" @change="toggleLaneType" v-model="checked_lanes">
-                        <label for="cb_bicyclelanes">Freigegebener Bordstein</label> </li>
+                        <label for="cb_bicyclelanes">Für Radverkehr freigegebener Bürgersteig</label> </li>
                     <li><input type="checkbox" id="cb_separat" value="separat" @change="toggleLaneType" v-model="checked_lanes">
-                        <label for="cb_bicyclelanes">Radwege auf Bürgersteig</label> </li>
+                        <label for="cb_bicyclelanes">Auf Bürgersteig geführte Radwege</label> </li>
+                    <li><input type="checkbox" id="cb_highways" value="highway" @change="toggleHighways" v-model="checked_highways">
+                        <label for="cb_bicyclelanes">Tempo auf Straßen</label> </li>
+                    <li><input type="checkbox" id="cb_highways_without_cycleway" value="highway_without_cycleway" @change="toggleHighwaysWithCyclesways" v-model="checked_highways">
+                        <label for="cb_bicyclelanes">Straßen mit Tempo >30 ohne Radweg</label> </li>
                 </ul>
             </div>
         </li>
@@ -130,6 +134,7 @@ var lane_data = [[${bicyclepaths}]];
 var poi_data = [[${pois}]];
 var barrier_data = [[${barriers}]];
 var sidewalk_data = [[${sidewalks}]];
+var highway_data = [[${highways}]];
 var color_dict = {
     green: "#33cc33",
     red: "#e60000",
@@ -137,6 +142,8 @@ var color_dict = {
     purple: "#A020F0",
     black: "#000000",
     white: "#FFFFFF",
+    orange: "#ff9900",
+    lightgreen: "#99ff99"
 };
 var pincolor_dict = {
     wall_loops: color_dict["red"],
@@ -158,9 +165,11 @@ var app4 = new Vue({
     bicycleLaneMarkers: [],
     poiMarkers: [],
     barrierMarkers: [],
+    highwayMarkers: [],
     checked: false,
     bicyclelanes_cb: false,
     checked_lanes: ["lanes", "sidewalk", "separat"],
+    checked_highways: [],
     other: [],
     maxCapacity : 0,
     selectedMinCapacity : 0,
@@ -169,7 +178,9 @@ var app4 = new Vue({
     minCapacity : 0,
     maxCapacity : 0,
     councilBarrier : null,
-    checkedparking: ["stands", "wall_loops", "protectedParking", "otherParking"]
+    checkedparking: ["stands", "wall_loops", "protectedParking", "otherParking"],
+    highwaysWithoutCycleways: null,
+    highwaysLayer: null
   },
   mounted : function(){
     this.setupLeafletMap();
@@ -181,6 +192,9 @@ var app4 = new Vue({
             attribution: 'Daten stammen aus Openstreetmap'
         }).addTo(this.mymap);
         L.control.scale({imperial: false}).addTo(this.mymap);
+        this.highwaysWithoutCycleways  = new L.layerGroup();
+        this.highwaysLayer = new L.layerGroup();
+        this.highwaysLayer.addTo(this.mymap);
       },
 
       initBicycleparking : function(){
@@ -281,17 +295,27 @@ var app4 = new Vue({
                 "Maxspeed Straße: " + actualLane.maxspeed + '<br><b>'
                 +"Oberflaeche: " + actualLane.surface + '<br><b>'
                 +"Breite rechts: " + actualLane.width_right + '<br><b>'
-                +(actualLane.sidewalk == null?"":"Bürgersteig: " + actualLane.sidewalk + '<br><b>')
                 +"Breite links: " + actualLane.width_left + '<br><b>');
             temp_lane.addTo(this.mymap);
 
-            this.bicycleLaneMarkers.push({lane: temp_lane, maxspeed: lane_data[i].maxspeed, surface: lane_data[i].surface,
+            this.bicycleLaneMarkers.push({lane: temp_lane, type: "lane", maxspeed: lane_data[i].maxspeed, surface: lane_data[i].surface,
             cycleway_left: lane_data[i].cycleway_left, cycleway_right: lane_data[i].cycleway_right,
             sidewalk_left: lane_data[i].sidewalk_left, sidewalk_right: lane_data[i].sidewalk_right});
         }
 
         for(var i=0;i<sidewalk_data.length;i++){
-            
+            actualLane = sidewalk_data[i];
+            var temp_latlngs = actualLane.geometry;
+            var color = color_dict["white"];
+
+            var temp_lane = new L.polyline(temp_latlngs, {color: color}).bindPopup(
+                +(actualLane.sidewalk == null?"":"Bürgersteig: " + actualLane.sidewalk + '<br><b>')
+                +"Breite links: " + actualLane.width_left + '<br><b>');
+            temp_lane.addTo(this.mymap);
+
+            this.bicycleLaneMarkers.push({lane: temp_lane, type: "sidewalk",
+            cycleway_left: lane_data[i].cycleway_left, cycleway_right: lane_data[i].cycleway_right,
+            sidewalk_left: lane_data[i].sidewalk_left, sidewalk_right: lane_data[i].sidewalk_right});
         }
       },
 
@@ -315,10 +339,7 @@ var app4 = new Vue({
 
        toggleLaneType : function(){
             for(i=0; i < this.bicycleLaneMarkers.length; i++){
-                if(this.bicycleLaneMarkers[i].hasOwnProperty("cycleway_right") && (this.bicycleLaneMarkers[i].cycleway_right == "lane"
-                                                    || this.bicycleLaneMarkers[i].cycleway_right == "opposite_lane"
-                                                    || this.bicycleLaneMarkers[i].cycleway_right == "track"
-                                                    || this.bicycleLaneMarkers[i].cycleway_right == "opposite_track")){
+                if(this.bicycleLaneMarkers[i].type == "lane"){
                     if(this.checked_lanes.includes("lanes")){
                         this.bicycleLaneMarkers[i].lane.addTo(this.mymap);
                     }
@@ -326,7 +347,7 @@ var app4 = new Vue({
                         this.bicycleLaneMarkers[i].lane.remove();
                     }
                 }
-                else if(this.bicycleLaneMarkers[i].hasOwnProperty("sidewalk") ){
+                else if(this.bicycleLaneMarkers[i].type == "sidewalk"){
                     if(this.checked_lanes.includes("sidewalk")) {
                         this.bicycleLaneMarkers[i].lane.addTo(this.mymap);
                     }
@@ -440,6 +461,51 @@ var app4 = new Vue({
                 else{
                     this.councilBarrier.addTo(this.mymap);
                 }
+          }
+      },
+      toggleHighways : function(){
+          if(this.highwaysLayer.getLayers().length == 0){
+                this.initHighways();
+          }
+          else{
+          if(this.checked_highways.includes("highway")){
+                this.highwaysLayer.addTo(this.mymap);
+          }
+          else{
+                this.mymap.removeLayer(this.highwaysLayer);
+          }
+          }
+      },
+      initHighways : function(){
+          var highway_dict = {
+              70: "red",
+              50: "orange",
+              30: "green",
+              10: "lightgreen"};
+          for(i=0; i < highway_data.length; i++){
+              actualHighway = highway_data[i];
+              if(actualHighway.maxspeed == 0){
+                    continue;
+              }
+              var temp_latlngs = actualHighway.geometry;
+              var color = color_dict[highway_dict[actualHighway.maxspeed]];
+
+              var temp_lane = new L.polyline(temp_latlngs, {color: color, opacity: 0.7, interactive: false});
+              temp_lane.addTo(this.highwaysLayer);
+
+              if(actualHighway.hasCycleway == false && actualHighway.maxspeed > 30 && actualHighway.length > 10 ){
+                      var color = color_dict["red"];
+                      var temp_lane = new L.polyline(temp_latlngs, {color: color, opacity: 0.7, interactive: false});
+                      temp_lane.addTo(this.highwaysWithoutCycleways);
+              }
+          }
+      },
+      toggleHighwaysWithCyclesways : function(){
+          if(this.checked_highways.includes("highway_without_cycleway")){
+                this.highwaysWithoutCycleways.addTo(this.mymap);
+          }
+          else{
+                this.mymap.removeLayer(this.highwaysWithoutCycleways);
           }
       }
   }
